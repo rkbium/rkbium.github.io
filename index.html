@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <!-- Bump ?v= whenever style.css or site.js changes so browsers fetch the new version -->
-<link rel="stylesheet" href="css/style.css?v=8" />
+<link rel="stylesheet" href="css/style.css?v=9" />
 </head>
 <body>
 
@@ -35,6 +35,7 @@
     <ul>
       <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#ongoing">Ongoing</a></li>
       <li><a href="#field">In the field</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#theses">Theses</a></li>
@@ -156,7 +157,7 @@
       <div class="tabs" role="tablist" aria-label="Completed research projects">
         <button type="button" role="tab" id="tab-abiotic" aria-controls="panel-abiotic" aria-selected="true">Abiotic stress</button>
         <button type="button" role="tab" id="tab-biotic" aria-controls="panel-biotic" aria-selected="false" tabindex="-1">Biotic stress</button>
-        <button type="button" role="tab" id="tab-global" aria-controls="panel-global" aria-selected="false" tabindex="-1">Global cereal project</button>
+        <button type="button" role="tab" id="tab-molecular" aria-controls="panel-molecular" aria-selected="false" tabindex="-1">Molecular markers (SSR)</button>
       </div>
 
       <div class="tab-panel" role="tabpanel" id="panel-abiotic" aria-labelledby="tab-abiotic">
@@ -213,8 +214,127 @@
               <li>Led a plant disease campaign (05/2021), turning plant pathology findings into practical disease management advice for farmers.</li>
               <li>Now continuing at Jawaharlal Nehru University with SSR markers linked to rust resistance.</li>
             </ul>
+          </div>
+          <div class="project-visual">
+            <div class="disease-cards">
+              <div class="disease">
+                <p class="disease-name">Spot blotch</p>
+                <p class="disease-sci"><em>Bipolaris sorokiniana</em></p>
+                <p class="disease-note">Fungal leaf disease, favoured by warm, humid conditions</p>
+              </div>
+              <div class="disease">
+                <p class="disease-name">Powdery mildew</p>
+                <p class="disease-sci"><em>Blumeria graminis</em></p>
+                <p class="disease-note">Fungal disease forming white growth on leaves</p>
+              </div>
+            </div>
+            <div class="photo-pair">
+              <button type="button" class="zoom" data-full="media/photos/ladybird.jpg" data-caption="A ladybird beetle on a wheat spike at the trial site."><img src="media/photos/thumb/ladybird.jpg" width="720" height="540" alt="Ladybird beetle on a green wheat spike" loading="lazy" /></button>
+              <button type="button" class="zoom" data-full="media/photos/fog.jpg" data-caption="Winter fog over the trial plots."><img src="media/photos/thumb/fog.jpg" width="720" height="540" alt="Wheat plots in winter fog" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <h4 class="findings-head">Work in progress <span class="status status-draft">In progress</span></h4>
+      <div class="tab-panel" role="tabpanel" id="panel-molecular" aria-labelledby="tab-molecular" hidden>
+        <div class="project">
+          <div class="project-text">
+            <p class="project-meta">2025 – 2026 · M.Sc. thesis, phase II · Jawaharlal Nehru University, New Delhi</p>
+            <h3>SSR marker validation of stress-tolerant wheat</h3>
+            <p>
+              The molecular phase of my M.Sc. thesis took the 21 genotypes from the field
+              trials into the lab. Genomic DNA was extracted with a modified CTAB method and
+              screened with seven SSR markers linked to heat and drought tolerance, to check
+              whether the genotypes that performed best in the field carry genetic signatures
+              that breeders can select for.
+            </p>
+            <ul class="outcomes">
+              <li>Seven SSR markers screened across 21 wheat genotypes from the National Wheat Research Program, Bhairahawa.</li>
+              <li>Six markers were fully polymorphic; polymorphism information content (PIC) ranged from <strong>0.25 to 0.50</strong>, highest for wms46 and wms130.</li>
+              <li>UPGMA clustering with the drought- and heat-linked markers grouped the genotypes by genetic similarity.</li>
+              <li><strong>NL 1504</strong> — among the most stable genotypes in the field phase — carried bands at Xbarc197, Xwmc233, Xwmc603, and Xwmc695, linking field stability with marker evidence.</li>
+            </ul>
+            <a class="more-link" href="#theses">See the M.Sc. defence slides →</a>
+          </div>
+          <div class="project-visual">
+            <div class="marker-table-wrap">
+              <table class="marker-table">
+                <caption>SSR markers used for molecular validation</caption>
+                <thead>
+                  <tr><th scope="col">Marker</th><th scope="col">Tm (°C)</th><th scope="col">Bands scored</th><th scope="col">Polymorphism</th><th scope="col">PIC</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">wms46</th><td>52</td><td>1 (100 bp)</td><td>100%</td><td>0.50</td></tr>
+                  <tr><th scope="row">wms130</th><td>56</td><td>1 (100 bp)</td><td>100%</td><td>0.50</td></tr>
+                  <tr><th scope="row">wms262</th><td>52</td><td>1 (B-3)</td><td>100%</td><td>0.41</td></tr>
+                  <tr><th scope="row">Xbarc197</th><td>54</td><td>1 (75 bp)</td><td>100%</td><td>0.25</td></tr>
+                  <tr><th scope="row">Xwmc233</th><td>52</td><td>3 (100, 75, 50 bp)</td><td>100%</td><td>0.43*</td></tr>
+                  <tr><th scope="row">Xwmc603</th><td>54</td><td>5 (B-1 to B-5)</td><td>20%</td><td>0.31**</td></tr>
+                  <tr><th scope="row">Xwmc695</th><td>54</td><td>1 (75 bp)</td><td>100%</td><td>0.25</td></tr>
+                </tbody>
+              </table>
+              <p class="chart-note">*Average PIC of the three polymorphic loci. **PIC of the single polymorphic band (B-4).</p>
+            </div>
+            <button type="button" class="zoom fig-card" data-full="media/figs/thesis-msc-ssr-upgma.png" data-caption="UPGMA clustering of the 21 wheat genotypes using drought-linked (left) and heat-linked (right) SSR markers — from Radhakrishna Bhandari's M.Sc. thesis defence."><img src="media/figs/thumb/thesis-msc-ssr-upgma.png" width="640" height="392" alt="UPGMA dendrograms of wheat genotypes from drought- and heat-linked SSR markers" loading="lazy" /></button>
+            <p class="chart-note">UPGMA clustering with drought-linked (left) and heat-linked (right) SSR markers · tap to enlarge.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="ongoing">
+    <div class="wrap wide">
+      <div class="section-head">
+        <span class="index">03</span>
+        <h2>Ongoing research projects</h2>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Ongoing research projects">
+        <button type="button" role="tab" id="tab-expression" aria-controls="panel-expression" aria-selected="true">Gene expression &amp; transformation</button>
+        <button type="button" role="tab" id="tab-disease" aria-controls="panel-disease" aria-selected="false" tabindex="-1">Spot blotch &amp; powdery mildew</button>
+        <button type="button" role="tab" id="tab-global" aria-controls="panel-global" aria-selected="false" tabindex="-1">Global cereal project</button>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-expression" aria-labelledby="tab-expression">
+        <div class="project">
+          <div class="project-text">
+            <p class="project-meta">01/2025 – present · Centre for Nano Sciences, School of Physical Sciences, Jawaharlal Nehru University, New Delhi</p>
+            <h3>Expression and transformation of stress-resistance genes in wheat</h3>
+            <p>
+              Building on the field trials and marker work, this project looks inside the
+              plant: how wheat genotypes switch genes on and off under individual and
+              combined heat and drought stress, and how biotic and abiotic stress-resistance
+              genes can be transformed and expressed in wheat.
+            </p>
+            <ul class="outcomes">
+              <li>Gene expression analysis of wheat genotypes under individual and combined heat and drought stress.</li>
+              <li>Molecular characterisation with heat-, drought-, and rust-linked SSR markers.</li>
+            </ul>
+          </div>
+          <div class="project-visual">
+            <ol class="pipeline" aria-label="Research pipeline, from field to gene">
+              <li class="done"><span class="step-status">Completed</span><b>Field phenotyping</b><span>Multi-environment trials under heat, drought, and rainfed stress</span></li>
+              <li class="done"><span class="step-status">Completed</span><b>SSR marker validation</b><span>Stable genotypes checked against stress-linked markers</span></li>
+              <li class="now"><span class="step-status">In progress</span><b>Gene expression</b><span>Which genes respond to heat, drought, and both together</span></li>
+              <li class="now"><span class="step-status">In progress</span><b>Transformation</b><span>Moving stress-resistance genes into wheat</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-disease" aria-labelledby="tab-disease" hidden>
+        <div class="project">
+          <div class="project-text">
+            <p class="project-meta">In progress · disease scores from the 2021–2024 field trials</p>
+            <h3>Spot blotch and powdery mildew across growing environments</h3>
+            <p>
+              Turning the disease scores from the multi-environment trials into
+              genotype-by-environment analyses — to see which genotypes hold up against
+              foliar disease as conditions shift from irrigated to rainfed, drought, and
+              heat stress.
+            </p>
             <ul class="outcomes">
               <li><strong>Spot blotch (<em>Bipolaris sorokiniana</em>):</strong> analysing how severity differs among genotypes and across irrigated, rainfed, drought, and heat stress environments.</li>
               <li><strong>Powdery mildew (<em>Blumeria graminis</em>):</strong> the same genotype-by-environment analysis for powdery mildew severity.</li>
@@ -236,8 +356,8 @@
               </div>
             </div>
             <div class="photo-pair">
-              <button type="button" class="zoom" data-full="media/photos/ladybird.jpg" data-caption="A ladybird beetle on a wheat spike at the trial site."><img src="media/photos/thumb/ladybird.jpg" width="720" height="540" alt="Ladybird beetle on a green wheat spike" loading="lazy" /></button>
-              <button type="button" class="zoom" data-full="media/photos/fog.jpg" data-caption="Winter fog over the trial plots."><img src="media/photos/thumb/fog.jpg" width="720" height="540" alt="Wheat plots in winter fog" loading="lazy" /></button>
+              <button type="button" class="zoom" data-full="media/photos/heading-data.jpg" data-caption="Recording data at heading in the trial plots."><img src="media/photos/thumb/heading-data.jpg" width="720" height="540" alt="Researchers recording data among wheat plots at heading" loading="lazy" /></button>
+              <button type="button" class="zoom" data-full="media/photos/grain-filling.jpg" data-caption="Wheat heads during grain filling at the trial site."><img src="media/photos/thumb/grain-filling.jpg" width="720" height="542" alt="Wheat heads during grain filling" loading="lazy" /></button>
             </div>
           </div>
         </div>
@@ -323,7 +443,7 @@
   <section id="field">
     <div class="wrap wide">
       <div class="section-head">
-        <span class="index">03</span>
+        <span class="index">04</span>
         <h2>In the field</h2>
       </div>
 
@@ -368,13 +488,9 @@
   <section id="publications">
     <div class="wrap wide">
       <div class="section-head">
-        <span class="index">04</span>
+        <span class="index">05</span>
         <h2>Publications</h2>
       </div>
-      <p class="intro-text">
-        28 journal articles — 21 research articles, 5 reviews, and 2 preprints —
-        cited 526 times on Google Scholar (h-index 11, i10-index 14). Selected work, newest first:
-      </p>
 
       <div class="filters" role="group" aria-label="Filter publications by topic">
         <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
@@ -411,6 +527,38 @@
           <figure class="pub-fig">
             <button type="button" class="zoom" data-full="media/figs/scirep-2026-fig2.png" data-caption="Fig. 2 — Which-won-where (WWW) biplots of twenty wheat genotypes across the tested environments. Bhandari et al. (2026), Scientific Reports, CC BY-NC-ND 4.0."><img src="media/figs/thumb/scirep-2026-fig2.png" width="480" height="324" alt="Which-won-where biplots from the paper" loading="lazy" /></button>
             <figcaption>Fig. 2 · Which-won-where biplots · <span class="lic">CC BY-NC-ND</span></figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat drought indices traits">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li><li><span class="dot env-RF"></span>Rainfed</li></ul>
+            <div class="mini-chart" aria-label="Yield loss compared with irrigated">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:28.8" data-tip="Heat stress: mean grain yield 28.8% lower than irrigated"><span class="lbar-label">Heat</span><span class="lbar-track"><span class="lbar-fill env-HS"></span></span><span class="lbar-val">28.8%</span></button>
+              <button type="button" class="lbar" style="--v:67.4" data-tip="Rainfed: mean grain yield 67.4% lower than irrigated"><span class="lbar-label">Rainfed</span><span class="lbar-track"><span class="lbar-fill env-RF"></span></span><span class="lbar-val">67.4%</span></button>
+            </div>
+            <dl class="glance-stats"><div><dt>genotypes</dt><dd>20</dd></div><div><dt>sites</dt><dd>2</dd></div></dl>
+            <p class="standout"><span>Most tolerant</span>Bhrikuti · NL 1504 · NL 1506 · NL 1718</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">International Journal of Agronomy</span><time datetime="2026-04-25">April 25, 2026</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1155/ioa/4985321">Yield and Agronomic Performance of Nepalese Wheat Genotypes Under Irrigated, Heat Stress, and Rainfed Environments</a></h3>
+            <div class="abstract" id="abs-ija-2026">
+              <p class="abstract-body">Understanding genotypic variation in wheat under multiple abiotic stresses is critical for sustaining productivity under climate changing scenarios. The study evaluated twenty elite <em>Triticum aestivum</em> L. genotypes, including three commercial checks (Bhrikuti, Gautam, and RR-21), under irrigated, heat-stress, and rainfed environments in the Terai region of Nepal at two different sites during the 2024–25 wheat growing season. Mean grain yield declined by 28.8% under heat stress and 67.4% under a rainfed environment compared to irrigated environments. The yield reductions were associated with significant genotypic variation (p &lt; 0.001) observed across environments for plant height, spikes per square meter, grains per spike, thousand kernel weight, and days to maturity. To identify resilient germplasms, eleven stress tolerance indices were evaluated. Mean stable yield (MSY), harmonic mean productivity (HMP), and modified stress tolerance index 2 (MSTI2) showed the strongest association with grain yield under both stress environments, while modified stress tolerance index 1 (MSTI1) and mean productivity (MP) were most effective under a nonstress environment. Bhrikuti, NL 1504, NL 1506, and NL 1718 demonstrated superior tolerance across both stress environments. Therefore, these identified genotypes could serve as valuable donor parents for developing stress-resilient varieties. These findings provide a robust quantitative framework for selecting indices and genotypes to enhance wheat productivity and ensure food security amidst escalating climatic variability in South Asia.</p>
+              <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+            </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-ija-2026">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-ija-2026" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-ija-2026" hidden><p>Across two Terai sites in the 2024–25 season, heat stress cut the mean grain yield of 20 elite genotypes by 28.8% and rainfed conditions by 67.4%. Mean stable yield, HMP, and MSTI2 tracked yield best under both stresses, while MSTI1 and MP worked best without stress — and Bhrikuti, NL 1504, NL 1506, and NL 1718 stood out as tolerant donor parents for breeding.</p></div>
+            <p class="pub-authors">M. R. Poudel, <strong>R. Bhandari</strong></p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/figs/thesis-msc-pca-rainfed.png" data-caption="PCA biplot of stress tolerance indices and wheat genotypes, irrigated vs. rainfed, 2024–25 season — from Radhakrishna Bhandari's M.Sc. thesis defence. The paper's own Fig. 2 shows the corresponding PCA."><img src="media/figs/thumb/thesis-msc-pca-rainfed.png" width="480" height="418" alt="PCA biplot of stress tolerance indices and genotypes under irrigated and rainfed conditions" loading="lazy" /></button>
+            <figcaption>PCA of stress indices, irrigated vs. rainfed · from the M.Sc. defence</figcaption>
           </figure>
         </li>
 
@@ -695,7 +843,7 @@
   <section id="theses">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">05</span>
+        <span class="index">06</span>
         <h2>Theses &amp; defence slides</h2>
       </div>
 
@@ -768,7 +916,7 @@
   <section id="reviewing">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">06</span>
+        <span class="index">07</span>
         <h2>Peer review</h2>
       </div>
       <p class="intro-text">
@@ -795,7 +943,7 @@
   <section id="education">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">07</span>
+        <span class="index">08</span>
         <h2>Education</h2>
       </div>
 
@@ -839,7 +987,7 @@
   <section id="skills">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">08</span>
+        <span class="index">09</span>
         <h2>Skills &amp; training</h2>
       </div>
 
@@ -874,7 +1022,7 @@
   <section id="talks">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">09</span>
+        <span class="index">10</span>
         <h2>Conferences &amp; outreach</h2>
       </div>
 
@@ -920,7 +1068,7 @@
   <section id="vision" class="vision">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">10</span>
+        <span class="index">11</span>
         <h2>Vision</h2>
       </div>
 
@@ -970,7 +1118,7 @@
   <section id="contact">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">11</span>
+        <span class="index">12</span>
         <h2>Get in touch</h2>
       </div>
 
@@ -983,8 +1131,6 @@
         </p>
         <dl class="contact-rows">
           <div><dt>Email</dt><dd><a href="mailto:radha.181401@pakc.tu.edu.np">radha.181401@pakc.tu.edu.np</a></dd></div>
-          <div><dt>Based in</dt><dd>Nepal</dd></div>
-          <div><dt>Profiles</dt><dd class="contact-profiles"><a href="https://scholar.google.com/citations?user=Gn3roLQAAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://orcid.org/0000-0001-5624-6307">ORCID</a> · <a href="https://www.researchgate.net/lab/Radhakrishna-Bhandari-Lab">ResearchGate</a> · <a href="https://www.linkedin.com/in/radhakrishna-bhandari/">LinkedIn</a> · <a href="https://x.com/rkbium">X (@rkbium)</a></dd></div>
         </dl>
       </div>
     </div>
@@ -1007,6 +1153,6 @@
   <button type="button" class="lb-next" aria-label="Next photo">›</button>
 </dialog>
 
-<script src="js/site.js?v=8"></script>
+<script src="js/site.js?v=9"></script>
 </body>
 </html>

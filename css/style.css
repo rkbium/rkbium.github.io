@@ -1074,6 +1074,80 @@ html:not(.js) .lbar-fill { width: calc(var(--v) * 1%); }
 .lb-prev[hidden],
 .lb-next[hidden] { display: none; }
 
+/* ---------- Molecular markers ---------- */
+
+.marker-table-wrap {
+  padding: 1rem 1.1rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+.marker-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; font-variant-numeric: tabular-nums; }
+.marker-table caption {
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--wheat-deep);
+  margin-bottom: 0.6rem;
+}
+.marker-table th,
+.marker-table td { padding: 0.4rem 0.5rem; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.marker-table thead th { font-size: 0.75rem; font-weight: 600; color: var(--ink-soft); }
+.marker-table tbody th { font-weight: 600; color: var(--ink); }
+.marker-table tbody tr:hover { background: rgba(184, 134, 43, 0.08); }
+.marker-table tbody tr:last-child th,
+.marker-table tbody tr:last-child td { border-bottom: 0; }
+
+.fig-card { background: #fff; border: 1px solid var(--line); padding: 0.4rem; }
+
+/* ---------- Field-to-gene pipeline (ongoing) ---------- */
+
+.pipeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.pipeline::before {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  top: 0.8rem;
+  bottom: 0.8rem;
+  width: 2px;
+  background: linear-gradient(var(--field) 50%, var(--wheat) 50%);
+}
+.pipeline li {
+  position: relative;
+  display: grid;
+  gap: 0.1rem;
+  margin-bottom: 0.8rem;
+  padding: 0.85rem 1rem 0.85rem 2.2rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+.pipeline li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 1.05rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--field);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+.pipeline li.now::before { background: var(--wheat); animation: pulse 2s ease-in-out infinite; }
+.pipeline li.now { border-color: rgba(184, 134, 43, 0.55); }
+.pipeline b { font-size: 0.98rem; color: var(--ink); font-weight: 600; }
+.step-status { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--field); }
+.pipeline li.now .step-status { color: var(--wheat-deep); }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 3px var(--paper), 0 0 0 3px rgba(184, 134, 43, 0.5); }
+  50% { box-shadow: 0 0 0 3px var(--paper), 0 0 0 8px rgba(184, 134, 43, 0); }
+}
+
 /* ---------- Global cereal project ---------- */
 
 .methods-note { font-size: 0.92rem; }
