@@ -4,16 +4,15 @@ A single-page personal research site, built as plain HTML/CSS (no build step,
 no framework — just `index.html` and `css/style.css`). Designed to be hosted
 free on GitHub Pages and pointed at your own domain.
 
-## 1. Personalize the content first
+## 1. Content
 
-Open `index.html` and fix everything marked `<!-- EDIT ME -->`:
+The content in `index.html` comes from the CV. Still worth adding:
 
-- [ ] Real email address (appears twice)
-- [ ] Link to your CV (PDF) — add the PDF to this folder and link to it, e.g. `cv.pdf`
-- [ ] Google Scholar / ResearchGate / ORCID links
-- [ ] Publications section — exact title, year, co-authors, DOI link for your
-      Scientific Reports paper, plus any others
-- [ ] Education section — exact degree title and years at IAAS
+- [ ] Google Scholar / ResearchGate / ORCID links (hero links and contact block)
+- [ ] A public CV PDF, e.g. `cv.pdf` — use a version without phone numbers
+      or referee contact details, since everything here is public
+- [ ] Keep the headline numbers (articles, citations, h-index, reviews) up
+      to date — they're in the `stats` block near the top of `index.html`
 - [ ] Swap the illustrative genotype plot in the hero for a real figure
       once you have one you're happy to publish (it's plain SVG, or you
       can replace the whole `<svg>...</svg>` block with an `<img>` tag)

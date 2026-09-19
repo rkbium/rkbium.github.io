@@ -111,6 +111,26 @@ p { margin: 0 0 1rem; }
 .site-nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; }
 .site-nav a:hover { color: var(--sky); }
 
+@media (max-width: 700px) {
+  .site-nav .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+  }
+  .site-nav ul {
+    flex-wrap: nowrap;
+    gap: 1.1rem;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .site-nav ul::-webkit-scrollbar { display: none; }
+  .site-nav a { white-space: nowrap; font-size: 0.9rem; }
+  main section { scroll-margin-top: 4.5rem; }
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -125,7 +145,7 @@ p { margin: 0 0 1rem; }
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; padding-top: 2rem; }
-  .hero-plot { order: -1; }
+  .hero-plot { max-width: 20rem; margin: 0 auto; }
 }
 
 .eyebrow-line {
@@ -182,7 +202,7 @@ p { margin: 0 0 1rem; }
 
 /* ---------- Sections ---------- */
 
-section { padding: 3.2rem 0; }
+section { padding: 3.2rem 0; scroll-margin-top: 3rem; }
 section + section { border-top: 1px solid var(--line); }
 
 .section-head {
@@ -233,71 +253,131 @@ section + section { border-top: 1px solid var(--line); }
 
 .focus-list p { color: var(--ink-soft); margin: 0; font-size: 0.96rem; }
 
-/* Timeline-style list — used only where content is genuinely sequential */
+/* Headline numbers under the hero */
 
-.timeline { margin-top: 1.8rem; }
-
-.timeline-item {
+.stats {
   display: grid;
-  grid-template-columns: 2.2rem 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+}
+.stats div { display: flex; flex-direction: column-reverse; }
+.stats dt { color: var(--ink-soft); font-size: 0.85rem; }
+.stats dd {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--wheat-deep);
+  line-height: 1.1;
+}
+@media (max-width: 600px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Dated entries — experience, education, conferences */
+
+.entries { margin-top: 1.8rem; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1.2rem;
   padding: 1.3rem 0;
   border-top: 1px solid var(--line);
 }
-.timeline-item:first-child { border-top: none; padding-top: 0; }
+.entry:first-child { border-top: none; padding-top: 0; }
 
-.timeline-item .num {
-  font-family: var(--serif);
-  color: var(--wheat);
-  font-size: 1.1rem;
-  font-style: italic;
+@media (max-width: 600px) {
+  .entry { grid-template-columns: 1fr; gap: 0.2rem; }
 }
 
-.timeline-item .status {
-  display: inline-block;
-  font-size: 0.8rem;
-  color: var(--field);
-  margin-bottom: 0.3rem;
+.entry .when {
+  margin: 0;
+  color: var(--wheat-deep);
+  font-size: 0.88rem;
+  padding-top: 0.15rem;
 }
 
-.timeline-item h3 {
-  font-size: 1.08rem;
+.entry h3 {
+  font-size: 1.05rem;
   font-weight: 600;
   font-family: var(--sans);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
-.timeline-item p { color: var(--ink-soft); font-size: 0.97rem; margin: 0; }
+.entry .where { color: var(--ink-soft); font-size: 0.93rem; margin: 0; }
 
-.genotype-tag {
-  display: inline-block;
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  padding: 0.05rem 0.4rem;
-  font-size: 0.82rem;
+.entry ul,
+ul.plain {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
   color: var(--ink-soft);
-  margin: 0.15rem 0.25rem 0 0;
+  font-size: 0.95rem;
 }
+.entry li,
+ul.plain li { margin-bottom: 0.3rem; }
 
 /* Publications */
 
 .pub-list { list-style: none; margin: 1.6rem 0 0; padding: 0; }
 .pub-item {
-  padding: 1rem 0;
+  padding: 1.1rem 0;
   border-top: 1px solid var(--line);
 }
 .pub-item:first-child { border-top: none; padding-top: 0; }
-.pub-item .venue { color: var(--sky); font-size: 0.9rem; }
-.pub-item p.title { font-family: var(--serif); font-size: 1.08rem; margin: 0.2rem 0 0.3rem; }
-.pub-item .note { color: var(--ink-soft); font-size: 0.9rem; }
+.pub-item p { margin: 0; }
+.pub-item p.title { font-family: var(--serif); font-size: 1.08rem; line-height: 1.35; margin-bottom: 0.3rem; }
+.pub-item .authors { color: var(--ink-soft); font-size: 0.9rem; }
+.pub-item .authors strong { color: var(--ink); font-weight: 600; }
+.pub-item .meta { color: var(--ink-soft); font-size: 0.86rem; margin-top: 0.2rem; overflow-wrap: anywhere; }
+.pub-item .venue { color: var(--sky); font-style: italic; }
 
-/* Education */
+/* Peer review */
 
-.edu-item { padding: 1.1rem 0; border-top: 1px solid var(--line); }
-.edu-item:first-child { border-top: none; padding-top: 0; }
-.edu-item .years { color: var(--wheat-deep); font-size: 0.9rem; }
-.edu-item h3 { font-size: 1.05rem; font-weight: 600; font-family: var(--sans); margin: 0.2rem 0 0.15rem; }
-.edu-item .place { color: var(--ink-soft); font-size: 0.95rem; }
+.review-list {
+  list-style: none;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  column-gap: 2rem;
+}
+.review-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.review-list small { display: block; color: var(--ink-soft); font-size: 0.8rem; }
+.review-list b { font-family: var(--serif); font-weight: 500; font-size: 1.2rem; color: var(--wheat-deep); }
+
+/* Skills & courses */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 700px) {
+  .two-col { grid-template-columns: 1fr; gap: 1.2rem; }
+}
+.two-col h3,
+.sub-head {
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-family: var(--sans);
+}
+.sub-head { margin-top: 2rem; }
+
+.course-list { list-style: none; margin: 0.6rem 0 0; padding: 0; }
+.course-list li { padding: 0.45rem 0; border-bottom: 1px solid var(--line); font-size: 0.96rem; }
+.course-list b { font-weight: 500; }
+.course-list span { color: var(--ink-soft); font-size: 0.88rem; margin-left: 0.4rem; }
 
 /* Contact */
 
@@ -313,7 +393,7 @@ section + section { border-top: 1px solid var(--line); }
 
 .contact-rows { margin-top: 1.2rem; display: grid; gap: 0.5rem; font-size: 0.98rem; }
 .contact-rows dt { display: inline-block; width: 6.5rem; color: var(--ink-soft); }
-.contact-rows dd { display: inline; margin: 0; }
+.contact-rows dd { display: inline; margin: 0; overflow-wrap: anywhere; }
 .contact-rows div { padding: 0.15rem 0; }
 
 /* Footer */
