@@ -108,6 +108,98 @@
     });
   });
 
+  /* ---------- "Show more" blocks (theses) ---------- */
+  document.querySelectorAll('.show-more').forEach(function (btn) {
+    var box = document.getElementById(btn.getAttribute('aria-controls'));
+    btn.addEventListener('click', function () {
+      var open = box.hidden;
+      box.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Show less' : 'Show more';
+    });
+  });
+
+  /* ---------- Horizontal carousels with arrow buttons ---------- */
+  document.querySelectorAll('[data-carousel]').forEach(function (c) {
+    var track = c.querySelector('.carousel-track');
+    var prev = c.querySelector('.cz-prev');
+    var next = c.querySelector('.cz-next');
+    function update() {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max;
+      c.classList.toggle('no-scroll', max <= 0);
+    }
+    function step(dir) {
+      track.scrollBy({ left: dir * Math.max(track.clientWidth * 0.8, 200), behavior: 'smooth' });
+    }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
+  /* ---------- Peer-review counts, live from ORCID ---------- */
+  // Journals with data-issn get their count from the public ORCID record.
+  if (window.fetch) {
+    fetch('https://pub.orcid.org/v3.0/0000-0001-5624-6307/peer-reviews', { headers: { Accept: 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        var counts = {}, total = 0;
+        (data.group || []).forEach(function (g) {
+          var ids = (g['external-ids'] && g['external-ids']['external-id']) || [];
+          var issn = ids.length ? String(ids[0]['external-id-value']).replace(/^issn:/, '') : '';
+          var n = 0;
+          (g['peer-review-group'] || []).forEach(function (pg) { n += (pg['peer-review-summary'] || []).length; });
+          counts[issn] = (counts[issn] || 0) + n;
+          total += n;
+        });
+        document.querySelectorAll('.journal[data-issn]').forEach(function (j) {
+          var n = counts[j.dataset.issn];
+          if (!n) return;
+          j.querySelector('[data-reviews]').textContent = n;
+          j.querySelector('.j-count').lastChild.textContent = n === 1 ? ' review' : ' reviews';
+        });
+        if (total) document.querySelectorAll('[data-orcid-total]').forEach(function (el) { el.textContent = total; });
+      })
+      .catch(function () {});
+  }
+
+  /* ---------- Site visit counter (Abacus, no cookies) ---------- */
+  // Counts once per browser session; later page views in the same session only read the number.
+  if (window.fetch) {
+    var visitsEl = document.querySelector('[data-visits]');
+    var counted = false;
+    try { counted = sessionStorage.getItem('rb-counted') === '1'; } catch (e) {}
+    if (location.hostname !== 'radhakrishnabhandari.com.np') counted = true;   // previews only read
+    var api = 'https://abacus.jasoncameron.dev/' + (counted ? 'get' : 'hit') + '/radhakrishnabhandari-com-np/visits';
+    if (visitsEl) {
+      fetch(api)
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          if (typeof d.value !== 'number') return;
+          visitsEl.textContent = d.value.toLocaleString('en');
+          visitsEl.closest('.visits').hidden = false;
+          try { sessionStorage.setItem('rb-counted', '1'); } catch (e) {}
+        })
+        .catch(function () {});
+    }
+  }
+
+  /* ---------- Side rail shows the section in view ---------- */
+  var railLabel = document.querySelector('[data-rail-section]');
+  if (railLabel && 'IntersectionObserver' in window) {
+    var railIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var head = e.target.querySelector('.section-head');
+        if (head) railLabel.textContent = head.textContent.replace(/\s+/g, ' ').trim().replace(/^(\d+) /, '$1 — ');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section').forEach(function (s) { railIo.observe(s); });
+  }
+
   /* ---------- Gallery: reveal the rest of the photos ---------- */
   var moreBtn = document.querySelector('.btn-more');
   if (moreBtn) {

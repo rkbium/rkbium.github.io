@@ -1074,6 +1074,205 @@ html:not(.js) .lbar-fill { width: calc(var(--v) * 1%); }
 .lb-prev[hidden],
 .lb-next[hidden] { display: none; }
 
+/* ---------- Peer review: stats + journal carousel ---------- */
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 0 0 1.6rem;
+}
+@media (max-width: 640px) { .review-stats { grid-template-columns: repeat(2, 1fr); } }
+.review-stats div { display: flex; flex-direction: column-reverse; padding-left: 0.9rem; border-left: 3px solid var(--wheat); }
+.review-stats dd { margin: 0; font-family: var(--serif); font-size: 2.1rem; line-height: 1.1; color: var(--ink); }
+.review-stats dt { font-size: 0.82rem; color: var(--ink-soft); }
+
+.carousel { margin-top: 0.4rem; }
+.carousel-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1rem; }
+.carousel-head p { margin: 0; max-width: var(--measure); color: var(--ink-soft); font-size: 0.95rem; }
+.carousel-nav { display: flex; gap: 0.5rem; flex: none; }
+.carousel-nav button {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.carousel-nav button:hover:not(:disabled) { background: var(--ink); color: var(--paper); }
+.carousel-nav button:disabled { opacity: 0.3; cursor: default; }
+.carousel.no-scroll .carousel-nav { visibility: hidden; }
+
+.carousel-track {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0 0 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.carousel-track > li { scroll-snap-align: start; }
+.carousel-track:focus-visible { outline: 2px solid var(--sky); outline-offset: 4px; }
+
+/* Journal "covers" — typographic, no publisher artwork */
+.journals { grid-auto-columns: 11.5rem; }
+.journal { display: flex; flex-direction: column; }
+.cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 3 / 4;
+  padding: 0.9rem 0.85rem;
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.18), transparent 45%),
+    linear-gradient(160deg, var(--c1), var(--c2));
+  color: #fff;
+  box-shadow: 0 14px 26px -16px rgba(34, 27, 20, 0.7);
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -30% auto;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.journal:hover .cover { transform: translateY(-4px); }
+.cover-pub { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+.cover-title { font-family: var(--serif); font-size: 1.35rem; line-height: 1.1; }
+.cover-q {
+  align-self: flex-start;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 3px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+.j-count { margin: 0.7rem 0 0 !important; font-size: 0.85rem; color: var(--ink-soft); }
+.j-count b { font-family: var(--serif); font-size: 1.6rem; font-weight: 500; color: var(--ink); margin-right: 0.15rem; }
+.j-name { margin: 0.1rem 0 0 !important; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); line-height: 1.35; }
+.verified { margin-top: 0.35rem; font-size: 0.72rem; color: var(--oa); }
+.verified::before { content: "✓ "; font-weight: 700; }
+
+/* ---------- Compact card rows (education, conferences) ---------- */
+
+.card-row {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 760px) {
+  .card-row { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.8rem; }
+  .card-row > li { scroll-snap-align: start; }
+}
+.card-track { grid-auto-columns: calc((100% - 2.2rem) / 3); }
+@media (max-width: 760px) { .card-track { grid-auto-columns: 78%; } }
+
+.mini-card {
+  padding: 1.1rem 1.2rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--field);
+  border-radius: 6px;
+}
+.card-row > .mini-card:first-child,
+.card-track > .mini-card:first-child { border-top-color: var(--wheat); }
+.mc-when { margin: 0 0 0.35rem !important; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; color: var(--wheat-deep); }
+.mini-card h3 { font-family: var(--sans); font-size: 1rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.25rem; }
+.mc-where { margin: 0 !important; font-size: 0.86rem; color: var(--ink-soft); }
+.mc-notes { margin: 0.6rem 0 0; padding: 0.6rem 0 0 1rem; border-top: 1px dashed var(--line); font-size: 0.82rem; color: var(--ink-soft); }
+.mc-notes li { margin-bottom: 0.15rem; }
+
+/* ---------- Theses: short lede, rest behind "Show more" ---------- */
+
+.thesis-lede { font-size: 0.96rem; color: var(--ink-soft); }
+.show-more {
+  align-self: flex-start;
+  margin: 0 0 1rem;
+  padding: 0.15rem 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sky);
+  cursor: pointer;
+}
+.show-more::after {
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-left: 0.5em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.2em) rotate(45deg);
+}
+.show-more[aria-expanded="true"]::after { transform: translateY(0.05em) rotate(-135deg); }
+.show-more:hover { color: var(--wheat-deep); }
+.more { margin-bottom: 0.4rem; }
+
+/* ---------- Footer visit counter ---------- */
+
+.visits b { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; }
+
+/* ---------- Vertical side rails (wide screens) ---------- */
+
+.rail { display: none; }
+@media (min-width: 1440px) {
+  .rail {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    width: calc((100vw - var(--page)) / 2);
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .rail span {
+    writing-mode: vertical-rl;
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0.7;
+    white-space: nowrap;
+  }
+  .rail-left { left: 0; }
+  .rail-left span { transform: rotate(180deg); }
+  .rail-left::before,
+  .rail-right::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 5.5rem;
+    height: 3.5rem;
+    width: 1px;
+    background: var(--wheat);
+  }
+  .rail-right { right: 0; }
+  .rail-right span { font-family: var(--serif); font-style: italic; letter-spacing: 0.12em; text-transform: none; font-size: 0.9rem; color: var(--wheat-deep); opacity: 0.9; }
+}
+
 /* ---------- Molecular markers ---------- */
 
 .marker-table-wrap {
