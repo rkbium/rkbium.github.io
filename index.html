@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <!-- Bump ?v= whenever style.css or site.js changes so browsers fetch the new version -->
-<link rel="stylesheet" href="css/style.css?v=4" />
+<link rel="stylesheet" href="css/style.css?v=5" />
 </head>
 <body>
 
@@ -37,8 +37,9 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#field">In the field</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#theses">Theses</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#vision">Vision</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -48,20 +49,24 @@
   <div class="hero-copy">
     <span class="eyebrow-line" aria-hidden="true"></span>
     <h1>Radhakrishna Bhandari</h1>
-    <p class="role">Plant breeder · M.Sc. Genetics &amp; Plant Breeding, IAAS, Tribhuvan University</p>
-    <p class="lede">
-      I breed for climate resilience — finding wheat genotypes that stay
-      productive under heat, drought, and disease, and understanding why.
-      My work combines multi-environment field trials and G × E stability
-      analysis with SSR markers and gene expression, with the aim of
-      delivering varieties that strengthen food and nutritional security
-      for farmers in Nepal and beyond.
+    <p class="contact-line">
+      <a href="mailto:radha.181401@pakc.tu.edu.np">radha.181401@pakc.tu.edu.np</a>
+      <span>Omsatiya-1, 32900, Nepal</span>
     </p>
-    <div class="hero-links">
-      <a href="mailto:radha.181401@pakc.tu.edu.np">Email</a>
-      <a href="#publications">Publications</a>
-      <a href="#field">Watch the field trial ↓</a>
-    </div>
+    <p class="lede">
+      I aim to contribute to the challenges associated with global food and
+      nutritional security through plant breeding and genetics. I aim to develop
+      crop varieties that can withstand extreme climatic challenges, pests, and
+      diseases through advanced molecular and field-based tools. I believe that
+      the successful implementation of my technologies in both rural and urban
+      agricultural areas at large will indicate my success and excellence.
+    </p>
+    <ul class="profiles" aria-label="Research profiles">
+      <li><a href="https://orcid.org/0000-0001-5624-6307" rel="me"><span class="pf pf-orcid" aria-hidden="true">iD</span>ORCID</a></li>
+      <li><a href="https://www.linkedin.com/in/radhakrishna-bhandari/" rel="me"><span class="pf pf-in" aria-hidden="true">in</span>LinkedIn</a></li>
+      <li><a href="https://www.researchgate.net/lab/Radhakrishna-Bhandari-Lab" rel="me"><span class="pf pf-rg" aria-hidden="true">RG</span>ResearchGate</a></li>
+      <!-- Add Google Scholar and X here once the profile URLs are known -->
+    </ul>
   </div>
 
   <figure class="hero-photo">
@@ -73,12 +78,18 @@
 </header>
 
 <div class="wrap">
-  <dl class="stats">
-    <div><dt>Journal articles</dt><dd>28</dd></div>
-    <div><dt>Citations</dt><dd>272</dd></div>
-    <div><dt>h-index</dt><dd>7</dd></div>
-    <div><dt>Manuscripts peer-reviewed</dt><dd>50+</dd></div>
-  </dl>
+  <!-- Citation numbers refresh from OpenAlex on every visit (js/site.js);
+       the values below are the fallback if that request fails. -->
+  <div class="metrics">
+    <dl class="stats">
+      <div><dt>Publications</dt><dd data-metric="works">28</dd></div>
+      <div><dt>Citations</dt><dd data-metric="citations">255</dd></div>
+      <div><dt>h-index</dt><dd data-metric="h">6</dd></div>
+      <div><dt>i10-index</dt><dd data-metric="i10">4</dd></div>
+      <div><dt>Manuscripts peer-reviewed</dt><dd>50+</dd></div>
+    </dl>
+    <p class="metrics-source">Citation metrics from <a href="https://openalex.org/authors/A5071161701">OpenAlex</a> (linked to ORCID), <span data-metric="updated">refreshed automatically</span>. Counts can differ slightly from Google Scholar, which indexes more sources.</p>
+  </div>
 </div>
 
 <main>
@@ -250,24 +261,33 @@
         <figcaption><strong>Multi-environmental trial (wheat)</strong> — Bhandari et al., 2023 · IAAS Paklihawa Campus, Bhairahawa · 2 min 48 s</figcaption>
       </figure>
 
-      <div class="gallery" aria-label="Photos from the field trials">
+      <div class="gallery" id="gallery" aria-label="Photos from the field trials">
         <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/aerial.jpg" data-caption="Aerial view of the trial plots and the polythene shelter."><img src="media/photos/thumb/aerial.jpg" width="720" height="480" alt="Aerial view of the trial plots and the polythene shelter" loading="lazy" /><span class="g-cap">Aerial view of the trial plots and the polythene shelter</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/plots-frames.jpg" data-caption="Trial plots laid out between bamboo frames."><img src="media/photos/thumb/plots-frames.jpg" width="720" height="539" alt="Trial plots laid out between bamboo frames" loading="lazy" /><span class="g-cap">Trial plots laid out between bamboo frames</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/heading-data.jpg" data-caption="Recording data at heading."><img src="media/photos/thumb/heading-data.jpg" width="720" height="540" alt="Recording data at heading" loading="lazy" /><span class="g-cap">Recording data at heading</span></button>
         <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/shelter.jpg" data-caption="Polythene shelter over the stress-treatment plots."><img src="media/photos/thumb/shelter.jpg" width="720" height="542" alt="Polythene shelter over the stress-treatment plots" loading="lazy" /><span class="g-cap">Polythene shelter over the stress-treatment plots</span></button>
         <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/sowing.jpg" data-caption="Sowing the trial plots."><img src="media/photos/thumb/sowing.jpg" width="720" height="540" alt="Sowing the trial plots" loading="lazy" /><span class="g-cap">Sowing the trial plots</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/irrigation.jpg" data-caption="Irrigating the plots."><img src="media/photos/thumb/irrigation.jpg" width="720" height="324" alt="Irrigating the plots" loading="lazy" /><span class="g-cap">Irrigating the plots</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/young-plots.jpg" data-caption="Young wheat plots and irrigation channels."><img src="media/photos/thumb/young-plots.jpg" width="720" height="540" alt="Young wheat plots and irrigation channels" loading="lazy" /><span class="g-cap">Young wheat plots and irrigation channels</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/fog.jpg" data-caption="Winter fog over the trial."><img src="media/photos/thumb/fog.jpg" width="720" height="540" alt="Winter fog over the trial" loading="lazy" /><span class="g-cap">Winter fog over the trial</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/field-team.jpg" data-caption="Recording data across the plots."><img src="media/photos/thumb/field-team.jpg" width="720" height="540" alt="Recording data across the plots" loading="lazy" /><span class="g-cap">Recording data across the plots</span></button>
         <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/spikes-shelter.jpg" data-caption="Wheat spikes inside the shelter."><img src="media/photos/thumb/spikes-shelter.jpg" width="540" height="720" alt="Wheat spikes inside the shelter" loading="lazy" /><span class="g-cap">Wheat spikes inside the shelter</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/field-team.jpg" data-caption="Recording data across the plots."><img src="media/photos/thumb/field-team.jpg" width="720" height="540" alt="Recording data across the plots" loading="lazy" /><span class="g-cap">Recording data across the plots</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/plots-dusk.jpg" data-caption="Wheat plots at dusk."><img src="media/photos/thumb/plots-dusk.jpg" width="720" height="542" alt="Wheat plots at dusk" loading="lazy" /><span class="g-cap">Wheat plots at dusk</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/measuring.jpg" data-caption="Measuring in the field."><img src="media/photos/thumb/measuring.jpg" width="540" height="720" alt="Measuring in the field" loading="lazy" /><span class="g-cap">Measuring in the field</span></button>
         <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/grain-filling.jpg" data-caption="Wheat heads during grain filling."><img src="media/photos/thumb/grain-filling.jpg" width="720" height="542" alt="Wheat heads during grain filling" loading="lazy" /><span class="g-cap">Wheat heads during grain filling</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/ladybird.jpg" data-caption="A ladybird beetle on a wheat spike."><img src="media/photos/thumb/ladybird.jpg" width="720" height="540" alt="A ladybird beetle on a wheat spike" loading="lazy" /><span class="g-cap">A ladybird beetle on a wheat spike</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/maturity.jpg" data-caption="Plots approaching harvest."><img src="media/photos/thumb/maturity.jpg" width="720" height="540" alt="Plots approaching harvest" loading="lazy" /><span class="g-cap">Plots approaching harvest</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/harvest.jpg" data-caption="Harvesting a plot by hand."><img src="media/photos/thumb/harvest.jpg" width="540" height="720" alt="Harvesting a plot by hand" loading="lazy" /><span class="g-cap">Harvesting a plot by hand</span></button>
         <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/threshing.jpg" data-caption="Plot-by-plot threshing."><img src="media/photos/thumb/threshing.jpg" width="720" height="540" alt="Plot-by-plot threshing" loading="lazy" /><span class="g-cap">Plot-by-plot threshing</span></button>
         <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/grain.jpg" data-caption="Cleaned grain from a harvested plot."><img src="media/photos/thumb/grain.jpg" width="720" height="540" alt="Cleaned grain from a harvested plot" loading="lazy" /><span class="g-cap">Cleaned grain from a harvested plot</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/team-shelter.jpg" data-caption="The research team at the trial site."><img src="media/photos/thumb/team-shelter.jpg" width="720" height="540" alt="The research team at the trial site" loading="lazy" /><span class="g-cap">The research team at the trial site</span></button>
-        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/data-analysis.jpg" data-caption="Working through the trial data."><img src="media/photos/thumb/data-analysis.jpg" width="720" height="540" alt="Working through the trial data" loading="lazy" /><span class="g-cap">Working through the trial data</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/plots-sky.jpg" data-caption="The trial under an open sky."><img src="media/photos/thumb/plots-sky.jpg" width="720" height="539" alt="The trial under an open sky" loading="lazy" /><span class="g-cap">The trial under an open sky</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/irrigation.jpg" data-caption="Irrigating the plots."><img src="media/photos/thumb/irrigation.jpg" width="720" height="324" alt="Irrigating the plots" loading="lazy" /><span class="g-cap">Irrigating the plots</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/young-plots.jpg" data-caption="Young wheat plots and irrigation channels."><img src="media/photos/thumb/young-plots.jpg" width="720" height="540" alt="Young wheat plots and irrigation channels" loading="lazy" /><span class="g-cap">Young wheat plots and irrigation channels</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/fog.jpg" data-caption="Winter fog over the trial."><img src="media/photos/thumb/fog.jpg" width="720" height="540" alt="Winter fog over the trial" loading="lazy" /><span class="g-cap">Winter fog over the trial</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/among-plots.jpg" data-caption="Among the plots at heading."><img src="media/photos/thumb/among-plots.jpg" width="720" height="540" alt="Among the plots at heading" loading="lazy" /><span class="g-cap">Among the plots at heading</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/field-day.jpg" data-caption="Field day with the team."><img src="media/photos/thumb/field-day.jpg" width="720" height="534" alt="Field day with the team" loading="lazy" /><span class="g-cap">Field day with the team</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/ladybird.jpg" data-caption="A ladybird beetle on a wheat spike."><img src="media/photos/thumb/ladybird.jpg" width="720" height="540" alt="A ladybird beetle on a wheat spike" loading="lazy" /><span class="g-cap">A ladybird beetle on a wheat spike</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/maturity.jpg" data-caption="Plots approaching harvest."><img src="media/photos/thumb/maturity.jpg" width="720" height="540" alt="Plots approaching harvest" loading="lazy" /><span class="g-cap">Plots approaching harvest</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/harvest.jpg" data-caption="Harvesting a plot by hand."><img src="media/photos/thumb/harvest.jpg" width="540" height="720" alt="Harvesting a plot by hand" loading="lazy" /><span class="g-cap">Harvesting a plot by hand</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/team-compost.jpg" data-caption="Field work with the team."><img src="media/photos/thumb/team-compost.jpg" width="720" height="540" alt="Field work with the team" loading="lazy" /><span class="g-cap">Field work with the team</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/team-shelter.jpg" data-caption="The research team at the trial site."><img src="media/photos/thumb/team-shelter.jpg" width="720" height="540" alt="The research team at the trial site" loading="lazy" /><span class="g-cap">The research team at the trial site</span></button>
+        <button type="button" class="zoom g-item g-more" data-group="gallery" data-full="media/photos/data-analysis.jpg" data-caption="Working through the trial data."><img src="media/photos/thumb/data-analysis.jpg" width="720" height="540" alt="Working through the trial data" loading="lazy" /><span class="g-cap">Working through the trial data</span></button>
       </div>
+      <p class="gallery-more"><button type="button" class="btn-more" aria-controls="gallery" aria-expanded="false">See more photos (12 more)</button></p>
     </div>
   </section>
 
@@ -279,7 +299,8 @@
       </div>
       <p class="intro-text">
         28 journal articles — 21 research articles, 5 reviews, and 2 preprints —
-        with 272 citations (h-index 7, i10-index 4). Selected work, newest first:
+        cited <span data-metric="citations">255</span> times (h-index <span data-metric="h">6</span>,
+        i10-index <span data-metric="i10">4</span>). Selected work, newest first:
       </p>
 
       <div class="filters" role="group" aria-label="Filter publications by topic">
@@ -598,73 +619,75 @@
     </div>
   </section>
 
-  <section id="experience">
+  <section id="theses">
     <div class="wrap">
       <div class="section-head">
         <span class="index">05</span>
-        <h2>Research experience</h2>
+        <h2>Theses &amp; defence slides</h2>
       </div>
 
-      <div class="entries">
-        <article class="entry">
-          <p class="when">01/2025 – present</p>
-          <div>
-            <h3>Climate-resilient wheat breeding — transformation &amp; expression of biotic and abiotic stress resistance genes</h3>
-            <p class="where">Centre for Nano Sciences, School of Physical Sciences, Jawaharlal Nehru University, New Delhi, India</p>
-            <ul>
-              <li>Molecular characterisation of wheat genotypes using heat, drought, and rust resistance SSR markers</li>
-              <li>Gene expression analysis of wheat genotypes under individual and combined heat and drought stress</li>
+      <div class="theses">
+        <article class="thesis">
+          <button type="button" class="thesis-cover" data-slides="media/slides/msc/slide-" data-count="35" data-title="M.Sc. defence">
+            <img src="media/slides/msc/cover.jpg" width="800" height="450" alt="Title slide of the M.Sc. thesis defence" loading="lazy" />
+            <span class="thesis-play">View all 35 slides</span>
+          </button>
+          <div class="thesis-body">
+            <p class="thesis-kicker">M.Sc. Genetics &amp; Plant Breeding · IAAS, Tribhuvan University</p>
+            <h3>Breeding Climate-Resilient Wheat for Nepalese Agricultural Systems Using an Integrated Analysis of Stability, Stress Tolerance and Genetic Diversity</h3>
+            <p class="thesis-advisors">Major advisor: Asst. Prof. Mukti Ram Poudel, Ph.D. · Member advisors: Asst. Prof. Ganga Ram Kohar, Ph.D.; Dr. Ujjawal Kumar Singh Kushwaha, Ph.D. (NBGRC, NARC)</p>
+            <ul class="thesis-facts">
+              <li><b>21</b> genotypes</li>
+              <li><b>4</b> environments</li>
+              <li><b>2</b> phases: field + SSR markers</li>
             </ul>
+            <ul class="outcomes">
+              <li>Field phase: 21 genotypes in an RCBD across irrigated, rainfed, drought, and late-sown environments; the environment explained <strong>96.58%</strong> of yield variation.</li>
+              <li>Severe yield losses: <strong>59.2%</strong> rainfed, <strong>84.95%</strong> drought, <strong>82.12%</strong> late-sown rainfed.</li>
+              <li>NL 1437 and NL 1504 were the most stable; BL 4984, BL 5116, Vijaya, and NL 1445 were best adapted to irrigated, rainfed, drought, and late-sown conditions.</li>
+              <li>Mean stable yield (MSY), MSTI2, and HMP were the most reliable indices under stress; NL 1504 was validated with heat- and drought-linked SSR markers in the molecular phase at Jawaharlal Nehru University, New Delhi.</li>
+            </ul>
+            <p class="thesis-links">
+              <a href="media/slides/msc/msc-defence.pdf">Download slides (PDF, 1.3 MB)</a>
+              <span>Funded by the University Grants Commission (UGC), Nepal</span>
+            </p>
           </div>
         </article>
 
-        <article class="entry">
-          <p class="when">11/2021 – 12/2024</p>
-          <div>
-            <h3>Climate-resilient wheat breeding — abiotic stress (field evaluation)</h3>
-            <p class="where">Agronomy Research Farm, IAAS, Tribhuvan University, Paklihawa Campus, Bhairahawa, Nepal</p>
-            <ul>
-              <li>Ran a two-year wheat trial in an alpha lattice design on the stability and adaptability of genotypes under irrigated, heat, and combined heat–drought stress (2022–23)</li>
-              <li>Undergraduate thesis: <em>Performance and stability of elite wheat genotypes under abiotic stress conditions</em> — irrigated, rainfed, drought, and heat stress (2023)</li>
-              <li>Studied how growing environment affects the crop growth rate of 20 wheat genotypes, and linked primary root architecture in the lab to heat and drought tolerance in the field</li>
-              <li>Measured the contribution of different plant parts to grain yield using the plant-part removal method</li>
-              <li>Mentored junior students as senior student researcher on their 2024 thesis trials (including combined heat and drought stress), under Asst. Prof. Mukti Ram Poudel, Ph.D.</li>
+        <article class="thesis">
+          <button type="button" class="thesis-cover" data-slides="media/slides/bsc/slide-" data-count="29" data-title="B.Sc. Ag thesis">
+            <img src="media/slides/bsc/cover.jpg" width="800" height="450" alt="Title slide of the undergraduate thesis presentation" loading="lazy" />
+            <span class="thesis-play">View all 29 slides</span>
+          </button>
+          <div class="thesis-body">
+            <p class="thesis-kicker">B.Sc. Ag · IAAS Paklihawa Campus · 3rd Undergraduate Research Symposium</p>
+            <h3>Performance and stability of elite wheat genotypes under abiotic stress conditions</h3>
+            <p class="thesis-advisors">Major advisor: Mukti Ram Poudel, Ph.D. · Member advisor: Laxman Aryal, Scientist, National Wheat Research Program (NWRP)</p>
+            <ul class="thesis-facts">
+              <li><b>20</b> genotypes</li>
+              <li><b>4</b> environments</li>
+              <li><b>2022–23</b> season</li>
             </ul>
+            <ul class="outcomes">
+              <li>Alpha lattice trial under irrigated, rainfed, drought (rain-out poly house), and heat stress (sown one month late) conditions.</li>
+              <li>Yield fell by <strong>65.1%</strong> rainfed, <strong>86.5%</strong> drought, and <strong>45.4%</strong> heat stress compared with irrigated plots.</li>
+              <li>NL 1488, NL 1506, Bhrikuti, and NL 1488 yielded most under irrigated, rainfed, drought, and heat stress; NL 1509, NL 1445, RR 21, and Gautam were the most stable.</li>
+              <li>Stress tolerance indices picked NL 1488 as the most drought-tolerant genotype.</li>
+            </ul>
+            <p class="thesis-links">
+              <a href="media/slides/bsc/bsc-defence.pdf">Download slides (PDF, 2.5 MB)</a>
+            </p>
           </div>
         </article>
+      </div>
 
-        <article class="entry">
-          <p class="when">11/2021 – 12/2024</p>
-          <div>
-            <h3>Climate-resilient wheat breeding — biotic stress (field evaluation)</h3>
-            <p class="where">Agronomy Research Farm, IAAS, Tribhuvan University, Paklihawa Campus</p>
-            <ul>
-              <li>Assessed the severity of spot blotch (<em>Bipolaris sorokiniana</em>) and powdery mildew (<em>Blumeria graminis</em>) across irrigated, rainfed, drought, and heat stress environments</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <p class="when">03/2022 – 11/2022</p>
-          <div>
-            <h3>Horticulture — cabbage nutrient management</h3>
-            <p class="where">Horticulture Research Farm, IAAS, Tribhuvan University, Paklihawa Campus</p>
-            <ul>
-              <li>Tested the effect of different nitrogen doses on the yield and performance of cabbage (<em>Brassica oleracea</em> var. <em>capitata</em>)</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <p class="when">05/2020 – 05/2021</p>
-          <div>
-            <h3>Agronomy of black rice — productivity &amp; profitability</h3>
-            <p class="where">Agronomy Research Farm, IAAS, Tribhuvan University, Paklihawa Campus</p>
-            <ul>
-              <li>Compared organic and inorganic nutrient management on the yield and performance of fine black rice</li>
-            </ul>
-          </div>
-        </article>
+      <div class="other-research">
+        <h3 class="sub-head">Other research &amp; mentoring</h3>
+        <ul class="mini-entries">
+          <li><span class="when">2024</span>Mentored junior students as senior student researcher on their thesis trials under combined heat and drought stress.</li>
+          <li><span class="when">03–11/2022</span>Cabbage (<em>Brassica oleracea</em> var. <em>capitata</em>) — effect of nitrogen doses on yield and performance, Horticulture Research Farm, IAAS Paklihawa.</li>
+          <li><span class="when">05/2020 – 05/2021</span>Black rice — organic versus inorganic nutrient management for yield and profitability, Agronomy Research Farm, IAAS Paklihawa.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -821,10 +844,60 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="vision" class="vision">
     <div class="wrap">
       <div class="section-head">
         <span class="index">10</span>
+        <h2>Vision</h2>
+      </div>
+
+      <div class="vision-grid">
+        <div class="vision-text">
+          <p class="vision-lead">A home for crop improvement in Nepal.</p>
+          <p>
+            My long-term goal is to establish a research institution in Nepal
+            dedicated to breeding improved crop varieties — cereals, fruits,
+            vegetables, ornamentals, turfgrass, and every crop that can feed,
+            nourish, and sustain people — built on the core principles of
+            genomics, bioinformatics, and biotechnology, with genetic
+            transformation, genetically modified crops, and CRISPR-Cas9 genome
+            editing at its centre.
+          </p>
+          <ul class="crop-chips" aria-label="Crops in scope">
+            <li>Cereals</li><li>Fruits</li><li>Vegetables</li><li>Ornamentals</li><li>Turfgrass</li><li>and more</li>
+          </ul>
+        </div>
+
+        <ol class="pillars">
+          <li>
+            <span class="pillar-num">01</span>
+            <h3>Genomics</h3>
+            <p>Reading crop genomes to find the genes and markers behind yield, quality, and stress tolerance.</p>
+          </li>
+          <li>
+            <span class="pillar-num">02</span>
+            <h3>Bioinformatics</h3>
+            <p>Turning sequence and field data into breeding decisions at scale.</p>
+          </li>
+          <li>
+            <span class="pillar-num">03</span>
+            <h3>Transformation &amp; GM crops</h3>
+            <p>Moving valuable genes into locally adapted varieties through genetic transformation.</p>
+          </li>
+          <li>
+            <span class="pillar-num">04</span>
+            <h3>CRISPR-Cas9</h3>
+            <p>Precise genome editing to build climate resilience, disease resistance, and nutrition into crops faster.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="index">11</span>
         <h2>Get in touch</h2>
       </div>
 
@@ -858,6 +931,6 @@
   <button type="button" class="lb-next" aria-label="Next photo">›</button>
 </dialog>
 
-<script src="js/site.js?v=4"></script>
+<script src="js/site.js?v=5"></script>
 </body>
 </html>

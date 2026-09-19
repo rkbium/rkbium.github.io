@@ -106,7 +106,48 @@
     });
   });
 
-  /* ---------- Lightbox for figures and photos ---------- */
+  /* ---------- Gallery: reveal the rest of the photos ---------- */
+  var moreBtn = document.querySelector('.btn-more');
+  if (moreBtn) {
+    var moreLabel = moreBtn.textContent;
+    moreBtn.addEventListener('click', function () {
+      var gallery = document.getElementById(moreBtn.getAttribute('aria-controls'));
+      var open = gallery.classList.toggle('show-all');
+      moreBtn.setAttribute('aria-expanded', String(open));
+      moreBtn.textContent = open ? 'Show fewer photos' : moreLabel;
+      if (!open) gallery.scrollIntoView({ block: 'start' });
+    });
+  }
+
+  /* ---------- Live citation metrics from OpenAlex (linked to ORCID) ---------- */
+  // Falls back silently to the numbers already in the HTML.
+  if (window.fetch) {
+    fetch('https://api.openalex.org/authors/A5071161701?select=works_count,cited_by_count,summary_stats,updated_date')
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (a) {
+        var values = {
+          works: a.works_count,
+          citations: a.cited_by_count,
+          h: a.summary_stats && a.summary_stats.h_index,
+          i10: a.summary_stats && a.summary_stats.i10_index
+        };
+        Object.keys(values).forEach(function (k) {
+          if (typeof values[k] !== 'number') return;
+          document.querySelectorAll('[data-metric="' + k + '"]').forEach(function (el) {
+            el.textContent = values[k].toLocaleString('en');
+          });
+        });
+        if (a.updated_date) {
+          var d = new Date(a.updated_date);
+          document.querySelectorAll('[data-metric="updated"]').forEach(function (el) {
+            el.textContent = 'last updated ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+          });
+        }
+      })
+      .catch(function () {});
+  }
+
+  /* ---------- Lightbox for figures, photos, and slides ---------- */
   var lb = document.getElementById('lightbox');
   if (!lb || typeof lb.showModal !== 'function') {
     // Old browsers: just open the full-size image
@@ -120,25 +161,51 @@
   var lbCap = lb.querySelector('figcaption');
   var prev = lb.querySelector('.lb-prev');
   var next = lb.querySelector('.lb-next');
-  var group = [];
+  var items = [];   // [{src, caption, alt}]
   var index = 0;
 
   function show(i) {
-    index = (i + group.length) % group.length;
-    var z = group[index];
-    lbImg.src = z.dataset.full;
-    lbImg.alt = z.querySelector('img') ? z.querySelector('img').alt : '';
-    lbCap.textContent = z.dataset.caption || '';
+    index = (i + items.length) % items.length;
+    var it = items[index];
+    lbImg.src = it.src;
+    lbImg.alt = it.alt || '';
+    lbCap.textContent = it.caption || '';
+  }
+
+  function open(list, start) {
+    items = list;
+    prev.hidden = next.hidden = items.length < 2;
+    show(start);
+    lb.showModal();
+  }
+
+  function fromZoom(z) {
+    var img = z.querySelector('img');
+    return { src: z.dataset.full, caption: z.dataset.caption, alt: img ? img.alt : '' };
   }
 
   document.querySelectorAll('.zoom').forEach(function (z) {
     z.addEventListener('click', function () {
-      group = z.dataset.group
+      var group = z.dataset.group
         ? Array.prototype.slice.call(document.querySelectorAll('.zoom[data-group="' + z.dataset.group + '"]'))
         : [z];
-      prev.hidden = next.hidden = group.length < 2;
-      show(group.indexOf(z));
-      lb.showModal();
+      open(group.map(fromZoom), group.indexOf(z));
+    });
+  });
+
+  // Thesis slide decks: numbered images slide-01.jpg … slide-NN.jpg
+  document.querySelectorAll('[data-slides]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var count = parseInt(btn.dataset.count, 10);
+      var list = [];
+      for (var n = 1; n <= count; n++) {
+        list.push({
+          src: btn.dataset.slides + (n < 10 ? '0' + n : n) + '.jpg',
+          caption: btn.dataset.title + ' — slide ' + n + ' of ' + count,
+          alt: btn.dataset.title + ', slide ' + n
+        });
+      }
+      open(list, 0);
     });
   });
 
