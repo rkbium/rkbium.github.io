@@ -19,12 +19,13 @@
 <meta property="og:description" content="Climate-resilient wheat breeding: multi-environment trials, G × E stability, stress tolerance indices, SSR markers, and gene expression. 28 journal articles, 50+ peer reviews." />
 <meta property="og:type" content="profile" />
 <meta property="og:url" content="https://radhakrishnabhandari.com.np/" />
+<meta property="og:image" content="https://radhakrishnabhandari.com.np/media/field-trial-hero.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-<!-- Bump ?v= whenever style.css changes so browsers fetch the new version -->
-<link rel="stylesheet" href="css/style.css?v=3" />
+<!-- Bump ?v= whenever style.css or site.js changes so browsers fetch the new version -->
+<link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
 
@@ -33,9 +34,10 @@
     <a class="brand" href="#top">R. Bhandari</a>
     <ul>
       <li><a href="#research">Research</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#field">In the field</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#reviewing">Reviewing</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -58,36 +60,16 @@
     <div class="hero-links">
       <a href="mailto:radha.181401@pakc.tu.edu.np">Email</a>
       <a href="#publications">Publications</a>
-      <a href="#experience">Research experience ↓</a>
+      <a href="#field">Watch the field trial ↓</a>
     </div>
   </div>
 
-  <!-- Stylised genotype-stability plot, in the spirit of an AMMI biplot —
-       a design motif, not a plotted dataset. -->
-  <svg class="hero-plot" viewBox="0 0 360 300" role="img" aria-labelledby="plotTitle">
-    <title id="plotTitle">Illustrative genotype-by-environment stability plot</title>
-    <line x1="30" y1="150" x2="330" y2="150" stroke="#ddd2b5" stroke-width="1"/>
-    <line x1="180" y1="20" x2="180" y2="280" stroke="#ddd2b5" stroke-width="1"/>
-    <circle cx="180" cy="150" r="95" fill="none" stroke="#ddd2b5" stroke-width="1" stroke-dasharray="3 4"/>
-
-    <circle cx="150" cy="95" r="4.5" fill="#b8862b"/>
-    <text x="158" y="92" class="cap">NL 1504</text>
-
-    <circle cx="230" cy="130" r="4.5" fill="#4c5b3a"/>
-    <text x="238" y="127" class="cap">NL 1512</text>
-
-    <circle cx="120" cy="175" r="4.5" fill="#2c4a52"/>
-    <text x="128" y="172" class="cap">Vijaya</text>
-
-    <circle cx="245" cy="205" r="4.5" fill="#b8862b"/>
-    <text x="253" y="202" class="cap">BL 5116</text>
-
-    <circle cx="175" cy="235" r="4.5" fill="#4c5b3a"/>
-    <text x="183" y="252" class="cap">BL 4984</text>
-
-    <text x="30" y="292" class="cap">IPCA1</text>
-    <text x="336" y="153" class="cap" text-anchor="end">Mean yield</text>
-  </svg>
+  <figure class="hero-photo">
+    <button type="button" class="zoom" data-full="media/field-trial-hero.jpg" data-caption="The multi-environment wheat trial at IAAS Paklihawa Campus, Bhairahawa — a still from the trial video.">
+      <img src="media/field-trial-hero.jpg" width="1280" height="720" alt="Aerial view of the wheat trial plots and polythene shelter at IAAS Paklihawa" />
+    </button>
+    <figcaption>Multi-environment wheat trial · IAAS Paklihawa, Bhairahawa</figcaption>
+  </figure>
 </header>
 
 <div class="wrap">
@@ -136,10 +118,490 @@
     </div>
   </section>
 
+  <section id="projects">
+    <div class="wrap wide">
+      <div class="section-head">
+        <span class="index">02</span>
+        <h2>Completed research projects</h2>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Completed research projects">
+        <button type="button" role="tab" id="tab-abiotic" aria-controls="panel-abiotic" aria-selected="true">Abiotic stress</button>
+        <button type="button" role="tab" id="tab-biotic" aria-controls="panel-biotic" aria-selected="false" tabindex="-1">Biotic stress</button>
+        <button type="button" role="tab" id="tab-global" aria-controls="panel-global" aria-selected="false" tabindex="-1">Global cereal project</button>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-abiotic" aria-labelledby="tab-abiotic">
+        <div class="project">
+          <div class="project-text">
+            <p class="project-meta">2019 – 2024 · Agronomy Research Farm, IAAS Paklihawa Campus, Bhairahawa</p>
+            <h3>Climate-resilient wheat under heat, drought &amp; combined stress</h3>
+            <p>
+              Multi-season, multi-environment trials of elite wheat genotypes from the
+              Nepal Agricultural Research Council, grown in alpha lattice designs under
+              irrigated, heat stress, rainfed, drought, and combined heat–drought
+              environments. For the drought treatment, a polythene shelter kept
+              natural rainfall off the plots.
+            </p>
+            <ul class="outcomes">
+              <li>Quantified the cost of stress: roughly <strong>20–29% yield loss</strong> under heat, <strong>39–48%</strong> under combined heat–drought, and up to <strong>87%</strong> under severe drought.</li>
+              <li>Identified stable, adaptable genotypes for breeding programmes — including NL 1402, NL 1386, NL 1381, and NL 1387 — and BL 4919 as a consistently high yielder.</li>
+              <li>Pinpointed traits to select on: early booting and heading, a longer booting-to-anthesis phase, plant height, and spike and grain weight.</li>
+              <li>Tested which stress tolerance indices remain reliable as stress intensifies.</li>
+              <li>Side studies on crop growth rate across environments, root architecture versus field tolerance, and the contribution of plant parts to grain yield.</li>
+            </ul>
+            <a class="more-link" href="#publications" data-filter-link="all">10 research papers from this project →</a>
+          </div>
+          <div class="project-visual">
+            <div class="loss-chart" aria-label="Wheat grain yield loss compared with irrigated conditions">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:29" data-tip="Heat stress: 20–29% lower yield than irrigated, across four studies"><span class="lbar-label">Heat</span><span class="lbar-track"><span class="lbar-fill env-HS"></span></span><span class="lbar-val">20–29%</span></button>
+              <button type="button" class="lbar" style="--v:48" data-tip="Combined heat and drought: 39–48% lower yield, across three studies"><span class="lbar-label">Heat + drought</span><span class="lbar-track"><span class="lbar-fill env-HD"></span></span><span class="lbar-val">39–48%</span></button>
+              <button type="button" class="lbar" style="--v:87" data-tip="Severe drought under the rain-out shelter: 87% lower mean yield (2022)"><span class="lbar-label">Drought</span><span class="lbar-track"><span class="lbar-fill env-D"></span></span><span class="lbar-val">87%</span></button>
+              <p class="chart-note">Tap or hover a bar for details.</p>
+            </div>
+            <div class="photo-pair">
+              <button type="button" class="zoom" data-full="media/photos/shelter.jpg" data-caption="Polythene shelter over the stress-treatment plots."><img src="media/photos/thumb/shelter.jpg" width="720" height="542" alt="Polythene shelter beside green wheat plots" loading="lazy" /></button>
+              <button type="button" class="zoom" data-full="media/photos/aerial.jpg" data-caption="Aerial view of the trial plots and the polythene shelter."><img src="media/photos/thumb/aerial.jpg" width="720" height="480" alt="Aerial view of the wheat trial plots" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-biotic" aria-labelledby="tab-biotic" hidden>
+        <div class="project">
+          <div class="project-text">
+            <p class="project-meta">11/2021 – 12/2024 · Agronomy Research Farm, IAAS Paklihawa Campus</p>
+            <h3>Foliar disease pressure across growing environments</h3>
+            <p>
+              Alongside the abiotic stress trials, I scored the severity of two major
+              foliar diseases of wheat — spot blotch (<em>Bipolaris sorokiniana</em>) and
+              powdery mildew (<em>Blumeria graminis</em>) — on genotypes grown under
+              irrigated, rainfed, drought, and heat stress environments, to see how the
+              growing environment shapes disease pressure.
+            </p>
+            <ul class="outcomes">
+              <li>Disease severity recorded for the same genotypes across four contrasting environments.</li>
+              <li>Led a plant disease campaign (05/2021), turning plant pathology findings into practical disease management advice for farmers.</li>
+              <li>Now continuing at Jawaharlal Nehru University with SSR markers linked to rust resistance.</li>
+            </ul>
+            <a class="more-link" href="#experience">See research experience →</a>
+          </div>
+          <div class="project-visual">
+            <div class="disease-cards">
+              <div class="disease">
+                <p class="disease-name">Spot blotch</p>
+                <p class="disease-sci"><em>Bipolaris sorokiniana</em></p>
+                <p class="disease-note">Fungal leaf disease, favoured by warm, humid conditions</p>
+              </div>
+              <div class="disease">
+                <p class="disease-name">Powdery mildew</p>
+                <p class="disease-sci"><em>Blumeria graminis</em></p>
+                <p class="disease-note">Fungal disease forming white growth on leaves</p>
+              </div>
+            </div>
+            <div class="photo-pair">
+              <button type="button" class="zoom" data-full="media/photos/ladybird.jpg" data-caption="A ladybird beetle on a wheat spike at the trial site."><img src="media/photos/thumb/ladybird.jpg" width="720" height="540" alt="Ladybird beetle on a green wheat spike" loading="lazy" /></button>
+              <button type="button" class="zoom" data-full="media/photos/fog.jpg" data-caption="Winter fog over the trial plots."><img src="media/photos/thumb/fog.jpg" width="720" height="540" alt="Wheat plots in winter fog" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-global" aria-labelledby="tab-global" hidden>
+        <div class="project">
+          <div class="project-text">
+            <p class="project-meta">Data-driven study · FAOSTAT</p>
+            <h3>Global oats productivity, 2000–2022</h3>
+            <p>
+              A global analysis of oats productivity built on FAOSTAT records for 74
+              countries across 2000–2022, tracing how productivity has changed over
+              two decades. The manuscript (Bhandari et al.) is being strengthened with
+              a more causal and inferential framework.
+            </p>
+            <ul class="outcomes">
+              <li>Country-level productivity trends for a major cereal, across more than two decades.</li>
+            </ul>
+          </div>
+          <div class="project-visual">
+            <dl class="big-stats">
+              <div><dt>countries</dt><dd>74</dd></div>
+              <div><dt>years of data</dt><dd>23</dd></div>
+              <div><dt>data source</dt><dd>FAOSTAT</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="field">
+    <div class="wrap wide">
+      <div class="section-head">
+        <span class="index">03</span>
+        <h2>In the field</h2>
+      </div>
+
+      <figure class="video">
+        <video controls preload="none" playsinline poster="media/field-trial-poster.jpg">
+          <source src="media/field-trial.mp4" type="video/mp4" />
+          Your browser can't play this video. <a href="media/field-trial.mp4">Download it instead</a>.
+        </video>
+        <figcaption><strong>Multi-environmental trial (wheat)</strong> — Bhandari et al., 2023 · IAAS Paklihawa Campus, Bhairahawa · 2 min 48 s</figcaption>
+      </figure>
+
+      <div class="gallery" aria-label="Photos from the field trials">
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/aerial.jpg" data-caption="Aerial view of the trial plots and the polythene shelter."><img src="media/photos/thumb/aerial.jpg" width="720" height="480" alt="Aerial view of the trial plots and the polythene shelter" loading="lazy" /><span class="g-cap">Aerial view of the trial plots and the polythene shelter</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/shelter.jpg" data-caption="Polythene shelter over the stress-treatment plots."><img src="media/photos/thumb/shelter.jpg" width="720" height="542" alt="Polythene shelter over the stress-treatment plots" loading="lazy" /><span class="g-cap">Polythene shelter over the stress-treatment plots</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/sowing.jpg" data-caption="Sowing the trial plots."><img src="media/photos/thumb/sowing.jpg" width="720" height="540" alt="Sowing the trial plots" loading="lazy" /><span class="g-cap">Sowing the trial plots</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/irrigation.jpg" data-caption="Irrigating the plots."><img src="media/photos/thumb/irrigation.jpg" width="720" height="324" alt="Irrigating the plots" loading="lazy" /><span class="g-cap">Irrigating the plots</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/young-plots.jpg" data-caption="Young wheat plots and irrigation channels."><img src="media/photos/thumb/young-plots.jpg" width="720" height="540" alt="Young wheat plots and irrigation channels" loading="lazy" /><span class="g-cap">Young wheat plots and irrigation channels</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/fog.jpg" data-caption="Winter fog over the trial."><img src="media/photos/thumb/fog.jpg" width="720" height="540" alt="Winter fog over the trial" loading="lazy" /><span class="g-cap">Winter fog over the trial</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/field-team.jpg" data-caption="Recording data across the plots."><img src="media/photos/thumb/field-team.jpg" width="720" height="540" alt="Recording data across the plots" loading="lazy" /><span class="g-cap">Recording data across the plots</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/spikes-shelter.jpg" data-caption="Wheat spikes inside the shelter."><img src="media/photos/thumb/spikes-shelter.jpg" width="540" height="720" alt="Wheat spikes inside the shelter" loading="lazy" /><span class="g-cap">Wheat spikes inside the shelter</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/grain-filling.jpg" data-caption="Wheat heads during grain filling."><img src="media/photos/thumb/grain-filling.jpg" width="720" height="542" alt="Wheat heads during grain filling" loading="lazy" /><span class="g-cap">Wheat heads during grain filling</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/ladybird.jpg" data-caption="A ladybird beetle on a wheat spike."><img src="media/photos/thumb/ladybird.jpg" width="720" height="540" alt="A ladybird beetle on a wheat spike" loading="lazy" /><span class="g-cap">A ladybird beetle on a wheat spike</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/maturity.jpg" data-caption="Plots approaching harvest."><img src="media/photos/thumb/maturity.jpg" width="720" height="540" alt="Plots approaching harvest" loading="lazy" /><span class="g-cap">Plots approaching harvest</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/harvest.jpg" data-caption="Harvesting a plot by hand."><img src="media/photos/thumb/harvest.jpg" width="540" height="720" alt="Harvesting a plot by hand" loading="lazy" /><span class="g-cap">Harvesting a plot by hand</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/threshing.jpg" data-caption="Plot-by-plot threshing."><img src="media/photos/thumb/threshing.jpg" width="720" height="540" alt="Plot-by-plot threshing" loading="lazy" /><span class="g-cap">Plot-by-plot threshing</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/grain.jpg" data-caption="Cleaned grain from a harvested plot."><img src="media/photos/thumb/grain.jpg" width="720" height="540" alt="Cleaned grain from a harvested plot" loading="lazy" /><span class="g-cap">Cleaned grain from a harvested plot</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/team-shelter.jpg" data-caption="The research team at the trial site."><img src="media/photos/thumb/team-shelter.jpg" width="720" height="540" alt="The research team at the trial site" loading="lazy" /><span class="g-cap">The research team at the trial site</span></button>
+        <button type="button" class="zoom g-item" data-group="gallery" data-full="media/photos/data-analysis.jpg" data-caption="Working through the trial data."><img src="media/photos/thumb/data-analysis.jpg" width="720" height="540" alt="Working through the trial data" loading="lazy" /><span class="g-cap">Working through the trial data</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap wide">
+      <div class="section-head">
+        <span class="index">04</span>
+        <h2>Publications</h2>
+      </div>
+      <p class="intro-text">
+        28 journal articles — 21 research articles, 5 reviews, and 2 preprints —
+        with 272 citations (h-index 7, i10-index 4). Selected work, newest first:
+      </p>
+
+      <div class="filters" role="group" aria-label="Filter publications by topic">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="heat" aria-pressed="false">Heat stress</button>
+        <button type="button" class="filter" data-filter="drought" aria-pressed="false">Drought</button>
+        <button type="button" class="filter" data-filter="stability" aria-pressed="false">G × E stability</button>
+        <button type="button" class="filter" data-filter="indices" aria-pressed="false">Stress indices</button>
+        <button type="button" class="filter" data-filter="traits" aria-pressed="false">Trait selection</button>
+        <button type="button" class="filter" data-filter="review" aria-pressed="false">Review</button>
+      </div>
+
+      <ol class="pub-list">
+        <li class="pub" data-tags="heat drought stability indices">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li><li><span class="dot env-RF"></span>Rainfed</li><li><span class="dot env-D"></span>Drought</li></ul>
+            <dl class="glance-stats"><div><dt>genotypes</dt><dd>20</dd></div><div><dt>environments</dt><dd>8</dd></div><div><dt>indices tested</dt><dd>11</dd></div></dl>
+            <p class="standout"><span>Most stable</span>NL 1402</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Scientific Reports</span><time datetime="2026-01-13">January 13, 2026</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1038/s41598-025-29819-0">Breeding climate-resilient wheat for Nepalese agricultural system under diverse abiotic stresses using an integrated AMMI, GGE and stress tolerance indices</a></h3>
+            <div class="abstract" id="abs-scirep-2026">
+            <p class="abstract-body">Climate change has been a significant concern for the production and productivity of wheat throughout the world, including Nepal due to an increasing frequency of heat, drought, and erratic rainfall. The study evaluated the stability and adaptability of twenty elite wheat genotypes across irrigated, heat stress, rainfed, and drought environments across two growing season (2022–2024). In addition, the study evaluated the suitability of 11 stress tolerance indices (STIs) across varying stress levels. The additive main effect and multiplicative interaction (AMMI) model revealed that environment was the primary source of yield variation, while which-won-where (WWW) model identified, G6 (NL 1402) as the most stable genotype across all eight test environments, with the lowest AMMI stability value (ASV) of 0.34. Similarly, G18 (NL 1512), G16 (NL 1501), G9 (NL 1492), and G6 (NL 1402) showed high adaptability under combined irrigated, heat stress, rainfed, and drought environments, respectively. Genotypes G17 (RR21) and G18 (NL 1512) had the least G × E interaction across combined environments (df = 7), where G10 (NL 1488), G13 (NL 1506), G14 (NL 1504), and G8 (BL 5116) under combined irrigated, heat stress, rainfed, and drought (df = 1), respectively. Stress tolerance indices dynamics revealed the predictive power of many indices declined with increasing stress severity, with mean stable yield (MSY), modified stress tolerance index 2 (MSTI2), and harmonic mean productivity (HMP) emerging as the most reliable indicators under rainfed and drought environments. Under severe drought, MSY consistently explained the highest proportion of the yield variation, with the coefficient of determination (R<sup>2</sup>) reaching 1.000. These findings provides both promising genotypes and validated tolerance indices that suggest valuable tool for breeding climate-resilient wheat for Nepal and similar South Asian agro-ecologies.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-scirep-2026">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-scirep-2026" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-scirep-2026" hidden><p>Across eight irrigated, heat, rainfed, and drought environments over two seasons, NL 1402 was the most stable of 20 elite genotypes, while NL 1512, NL 1501, NL 1492, and NL 1402 were best adapted to irrigated, heat, rainfed, and drought conditions respectively. Most stress tolerance indices lost predictive power as stress intensified, but mean stable yield, MSTI2, and harmonic mean productivity stayed reliable under rainfed and drought conditions.</p></div>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, M. R. Poudel, H. Paudel, M. P. Neupane, P. Solanki, U. K. S. Kushwaha</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/figs/scirep-2026-fig2.png" data-caption="Fig. 2 — Which-won-where (WWW) biplots of twenty wheat genotypes across the tested environments. Bhandari et al. (2026), Scientific Reports, CC BY-NC-ND 4.0."><img src="media/figs/thumb/scirep-2026-fig2.png" width="480" height="324" alt="Which-won-where biplots from the paper" loading="lazy" /></button>
+            <figcaption>Fig. 2 · Which-won-where biplots · <span class="lic">CC BY-NC-ND</span></figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat drought">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li><li><span class="dot env-RF"></span>Rainfed</li><li><span class="dot env-D"></span>Drought</li></ul>
+            <p class="glance-note">Subscription article — full text at the publisher.</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Agricultural Research</span><time datetime="2024-11-11">November 11, 2024</time></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1007/s40003-024-00816-5">Breeding for climate resilience in wheat under irrigated, heat stress, rainfed and drought environments</a></h3>
+            <p class="abstract-external"><a href="https://doi.org/10.1007/s40003-024-00816-5">Read the abstract on the publisher's site →</a></p>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, M. R. Poudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/photos/aerial-oblique.jpg" data-caption="Field photo: the multi-environment trial at IAAS Paklihawa Campus from the air."><img src="media/photos/thumb/aerial-oblique.jpg" width="720" height="424" alt="Aerial photo of the trial plots" loading="lazy" /></button>
+            <figcaption>Field photo · the trial from the air</figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat drought indices">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li><li><span class="dot env-HD"></span>Heat + drought</li></ul>
+            <div class="mini-chart" aria-label="Yield loss compared with irrigated">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:22.5" data-tip="Mild stress (heat): about 20–25% yield reduction"><span class="lbar-label">Heat</span><span class="lbar-track"><span class="lbar-fill env-HS"></span></span><span class="lbar-val">~20–25%</span></button>
+              <button type="button" class="lbar" style="--v:47.5" data-tip="High stress (heat + drought): about 45–50% yield reduction"><span class="lbar-label">Heat + drought</span><span class="lbar-track"><span class="lbar-fill env-HD"></span></span><span class="lbar-val">~45–50%</span></button>
+            </div>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Journal of Agriculture and Food Research</span><time datetime="2024-11-09">November 9, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1016/j.jafr.2024.101506">Evaluating stress tolerance indices for their comparative validity to assess terminal heat stress and heat drought tolerance of winter wheat (<em>Triticum aestivum</em> L.) genotypes</a></h3>
+            <div class="abstract" id="abs-jafr-2024">
+            <p class="abstract-body">Stress tolerance indices have been used to evaluate the performance and stability of elite wheat genotypes under non-stress and stress environments. From 1978 to present, many stress tolerance indices have been proposed but only few studies have been conducted so far for the comparative validity of those indices based on stress levels. The study focuses to address the comparative validity of those stress tolerance indices at two distinct stress level under mild stress-heat stress environment (∼20–25 % yield reduction) and high stress-heat drought environment (∼45–50 % yield reduction). Statistical tool such as correlation, linear regression, coefficient of determination (R<sup>2</sup>), slope of regression line and principal component analysis were performed for the study. Correlation and principal component analysis revealed that, indices such as modified stress tolerance indices (MSTI1), mean productivity (MP), geometric mean productivity (GMP), harmonic mean productivity (HMP), relative efficiency index (REI), mean relative performance (MRP) and modified stress indices 2 (MSTI2) were found to have strong positive association with wheat yield under non stress and stress environments at both levels. The coefficient of determination (R<sup>2</sup>) and slope of regression line revealed, MP and MSTI1 are the most predictive and explanatory indices under irrigated environment. While indices such as MRP, REI, yield index (YI) are most predictive and explanatory under mild stress-heat stress environment and GMP, HMP, mean stable yield (MSY), tolerance index (TOL), yield stability index (YSI), stress tolerance index (STI), MSTI2, stress susceptibility index (SSI), percentage yield loss (PYL), relative stress index (RSI) are appropriate under high stress-heat drought environment.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-jafr-2024">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-jafr-2024" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-jafr-2024" hidden><p>Which stress tolerance index to trust depends on how severe the stress is. Mean productivity and MSTI1 best predicted yield under irrigation; MRP, REI, and yield index under mild heat stress; and a broader set — including GMP, HMP, MSY, YSI, and STI — under severe heat–drought stress.</p></div>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, S. A. Alharbi, M. J. Ansari, M. R. Poudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/figs/jafr-2024-fig5.jpg" data-caption="Fig. 5 from Bhandari et al. (2024), Journal of Agriculture and Food Research, CC BY-NC-ND 4.0."><img src="media/figs/thumb/jafr-2024-fig5.jpg" width="480" height="401" alt="Principal component biplots from the paper" loading="lazy" /></button>
+            <figcaption>Fig. 5 · from the paper · <span class="lic">CC BY-NC-ND</span></figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat drought stability">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li><li><span class="dot env-HD"></span>Heat + drought</li></ul>
+            <div class="mini-chart" aria-label="Yield loss compared with irrigated">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:20" data-tip="Heat stress: 20% lower yield than irrigated"><span class="lbar-label">Heat</span><span class="lbar-track"><span class="lbar-fill env-HS"></span></span><span class="lbar-val">20%</span></button>
+              <button type="button" class="lbar" style="--v:39" data-tip="Heat + drought: 39% lower yield than irrigated"><span class="lbar-label">Heat + drought</span><span class="lbar-track"><span class="lbar-fill env-HD"></span></span><span class="lbar-val">39%</span></button>
+            </div>
+            <p class="standout"><span>Most stable</span>NL 1386</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Current Applied Science and Technology</span><time datetime="2024-10-17">October 17, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.55003/CAST.2024.259959">Performance and stability of elite wheat genotypes under irrigated, heat stress, and heat drought environments</a></h3>
+            <div class="abstract" id="abs-cast-2024">
+            <p class="abstract-body">Heat stress and drought are a significant threat to wheat production globally. These abiotic stresses influence growth, physiology, and yield-attributing parameters of wheat. To evaluate the performance and stability of elite wheat genotypes, a field experiment was conducted in the western region of Nepal at Bhairahawa, Rupandehi comprising twenty elite wheat lines under irrigated, heat stress, and heat drought conditions using alpha lattice design with two replications. The combined ANOVA across environments and AMMI model ANOVA revealed that traits, days to booting (DTB), days to heading (DTH), days to anthesis (DTA), spike weight (SW), thousand-kernel weight (TKW), and grain yield (GY) were significantly influenced by the environment (p≤0.05). The yield of wheat was reduced by 20% and 39% under heat stress and heat drought environments as compared to irrigated environment. BL 4919, NL 1368, and Bhrikuti were the highest yielding genotypes under irrigated, heat stress, and heat drought environments with mean grain yields of 6254, 4261.5, and 3322.5 kg ha<sup>-1</sup>, respectively. AMMI analysis revealed that BL 4919, NL 1417, and NL 1420 were the most adaptive genotypes under irrigated, heat-stress, and heat-drought environments. Whereas the Which Won Where (WWW) model revealed that BL 4919, NL 1368, and Bhrikuti were the most adaptive genotype under irrigated, heat stress, and heat drought environments. From Mean vs. Stability assessment, NL 1412 and NL 1369 were identified as high-yielding stable genotypes. Both the AMMI and WWW models identified NL 1386 as the most stable genotype with the lowest AMMI stability value (ASV) of 0.13. Hence, these selected genotypes should further be promoted in wheat improvement programs to further develop potential climate-resilient varieties.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-cast-2024">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-cast-2024" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-cast-2024" hidden><p>Heat stress and combined heat–drought cut grain yield by 20% and 39% compared with irrigated conditions. BL 4919, NL 1368, and Bhrikuti were the top yielders in irrigated, heat, and heat–drought environments, and both the AMMI and which-won-where models picked NL 1386 as the most stable genotype.</p></div>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, M. R. Poudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/figs/thesis-ammi-biplot.png" data-caption="AMMI biplot (PCA1 score vs. grain yield) of the trial genotypes — from Radhakrishna Bhandari's B.Sc. Ag thesis defence, on which this paper is based."><img src="media/figs/thumb/thesis-ammi-biplot.png" width="480" height="477" alt="AMMI biplot of PCA1 score against grain yield" loading="lazy" /></button>
+            <figcaption>AMMI biplot · from the thesis defence</figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat traits">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-HS"></span>Heat stress</li></ul>
+            <dl class="glance-stats"><div><dt>genotypes</dt><dd>35</dd></div><div><dt>lattice blocks</dt><dd>7</dd></div></dl>
+            <p class="standout"><span>Select for</span>Taller, earlier plants</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Makara Journal of Science</span><time datetime="2024-09-25">September 25, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.7454/mss.v28i3.2209">Phenotypic correlation, path analysis, and quantitative trait-based selection of elite wheat genotypes under heat stress conditions in the Terai region of Nepal</a></h3>
+            <div class="abstract" id="abs-makara-2024">
+            <p class="abstract-body">Wheat is one of the most important cereal crops worldwide, but the production and productivity of wheat is affected by heat stress. A field experiment using an alpha lattice design with seven blocks was conducted on 35 elite wheat genotypes in the Terai region of Nepal to identify the most appropriate trait resulting in a high-yielding wheat genotype with high tolerance to heat stress. Correlation analysis revealed that booting-to-heading duration (BtoH), booting-to-anthesis duration (BtoA), plant height (Ph), spike length (SL), spike weight (SW), thousand grain weight (TGW), straw yield (SY), and total biomass yield (TY) had a significant positive correlation with grain yield (GY), whereas days to booting (DTB), days to heading (DTH), and days to anthesis (DTA) had significant negative correlations with GY (p ≤ 0.05). Path analysis revealed that DTB and DTA had a direct negative effect on the GY, whereas DTH had an indirect negative effect on yield via DTB. BtoA, Ph, SL, SW, and TGW had direct positive effects on yield, whereas BtoH had an indirect positive effect on yield via DTB. Principal component analysis demonstrated that high-yielding genotypes can be selected using DTB, DTH, DTA, BtoH, BtoA, and Ph. Taller and earlier genotype with long BtoH and BtoA would produce high yield under heat stress.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-makara-2024">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-makara-2024" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-makara-2024" hidden><p>In 35 elite genotypes grown under heat stress in the Terai, a longer booting-to-heading and booting-to-anthesis phase, taller plants, and longer, heavier spikes and grains went with higher yield, while late booting, heading, and anthesis lowered it. Taller, earlier genotypes with an extended booting phase are the best candidates for selection under heat.</p></div>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, B. Panthi, S. Nyaupane, S. Shrestha, P. Sharma, R. K. Gupta, S. Sahani, M. R. Poudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/figs/thesis-study-area.jpg" data-caption="Study area map — Siddharthanagar, Rupandehi, in Nepal's Terai. From Radhakrishna Bhandari's B.Sc. Ag thesis defence."><img src="media/figs/thumb/thesis-study-area.jpg" width="480" height="339" alt="Map of the study area in Rupandehi, Nepal" loading="lazy" /></button>
+            <figcaption>Study area · from the thesis defence</figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat stability">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li></ul>
+            <div class="mini-chart" aria-label="Yield loss compared with irrigated">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:29" data-tip="Heat stress: 29% lower yield on average; NL 1368 lost least (21.5%), NL 1386 most (41.4%)"><span class="lbar-label">Heat</span><span class="lbar-track"><span class="lbar-fill env-HS"></span></span><span class="lbar-val">29%</span></button>
+            </div>
+            <p class="standout"><span>Most stable</span>NL 1387</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Research on Crops</span><time datetime="2024-03-11">March 11, 2024</time></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.31830/2348-7542.2024.ROC-1052">Impact of terminal heat stress on performance of Nepalese wheat (<em>Triticum aestivum</em> L.) genotypes</a></h3>
+            <p class="abstract-external"><a href="https://doi.org/10.31830/2348-7542.2024.ROC-1052">Read the abstract on the publisher's site →</a></p>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-roc-2024">Key findings</button>
+            </div>
+            <div class="summary" id="sum-roc-2024" hidden><p>Across trials from 2019 to 2023, heat stress lowered the yield of 20 elite genotypes by 29% on average. BL 4919 yielded most under both irrigated and heat stress conditions, NL 1368 lost the least yield, and NL 1387 was the most stable — making them candidate parents for heat-stress breeding.</p></div>
+            <p class="pub-authors">M. R. Poudel, H. K. Poudel, <strong>R. Bhandari</strong></p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/photos/spikes-shelter.jpg" data-caption="Field photo: wheat spikes inside the polythene shelter at the trial site."><img src="media/photos/thumb/spikes-shelter.jpg" width="540" height="720" alt="Green wheat spikes under a polythene shelter" loading="lazy" /></button>
+            <figcaption>Field photo · wheat spikes at the trial</figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat stability traits">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li></ul>
+            <dl class="glance-stats"><div><dt>environments</dt><dd>6</dd></div><div><dt>seasons</dt><dd>3</dd></div></dl>
+            <p class="standout"><span>Most stable</span>NL 1369 · NL 1386 · NL 1376</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Journal of Sustainable Agriculture and Environment</span><time datetime="2024-03-01">March 1, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1002/sae2.12098">Genotype × environment interaction and selection parameters for high yielding wheat genotypes under irrigated and heat stress environment</a></h3>
+            <div class="abstract" id="abs-jsae-2024">
+            <p class="abstract-body"><b>Introduction</b> Wheat is a significant contributor to the food and nutritional security of the world. Due to climatic constraints and heat stress condition, the potentiality of wheat to eradicate existing hunger and malnutrition has been severely limited all around the world. <b>Materials and Methods</b> To evaluate the performance and stability of elite wheat genotype under irrigated and heat stress environment, a field experiment was conducted during the wheat growing season of 2020, 2021 and 2022 under irrigated and heat stress environment that altogether created six distinct wheat growing environments. <b>Results</b> The combined ANOVA revealed that all quantitative traits studied were significantly influenced by heat stress environments (p &lt; 0.01). Which Won Where (WWW) model revealed, Bhairahawa lines (BL) 4407, Nepal lines (NL) 1384 and NL 1346 performed best under irrigated environments of 2020, 2021 and 2022 while BL 4407, NL 1384 and NL 1381 performed best under heat stress environment of 2020, 2021 and 2022. WWW model showed, NL 1369, NL 1386 and NL 1376 as the most stable genotypes across irrigated and heat stress environment. The phenotypic correlation, path analysis, network diagram, cluster analysis and cluster based principal component analysis analysis revealed traits, days to booting (DTB), plant height (Ph), spike length (SL), ten spike weight (TSW) and thousand kernel weight (TKW) are most closely associated with grain yield of wheat. <b>Conclusion</b> High yielding genotypes should be selected based on earliness in DTB, longer Ph, SL and higher TSW and TKW under both environments. Breeding for taller genotypes should specifically be focused to obtain high yielding genotypes under heat stress environments.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-jsae-2024">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-jsae-2024" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-jsae-2024" hidden><p>Over three seasons (2020–2022) of irrigated and heat stress trials, heat significantly affected every trait measured. NL 1369, NL 1386, and NL 1376 were the most stable genotypes, and early booting, plant height, spike length, and spike and kernel weight were most closely tied to yield — with taller genotypes favoured under heat.</p></div>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, M. R. Poudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/photos/aerial.jpg" data-caption="Field photo: aerial view of the trial plots and polythene shelter at IAAS Paklihawa Campus."><img src="media/photos/thumb/aerial.jpg" width="720" height="480" alt="Aerial view of the trial plots" loading="lazy" /></button>
+            <figcaption>Field photo · aerial view of the plots</figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat drought stability traits">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li><li><span class="dot env-HD"></span>Heat + drought</li></ul>
+            <div class="mini-chart" aria-label="Yield loss compared with irrigated">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:24" data-tip="Heat stress: 24% lower yield; top yielder BL 4919 (3037.6 kg/ha)"><span class="lbar-label">Heat</span><span class="lbar-track"><span class="lbar-fill env-HS"></span></span><span class="lbar-val">24%</span></button>
+              <button type="button" class="lbar" style="--v:48" data-tip="Heat + drought: 48% lower yield; top yielder Bhrikuti (2228.9 kg/ha)"><span class="lbar-label">Heat + drought</span><span class="lbar-track"><span class="lbar-fill env-HD"></span></span><span class="lbar-val">48%</span></button>
+            </div>
+            <p class="standout"><span>Most stable</span>NL 1381</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Plant Stress</span><time datetime="2024-01-18">January 18, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1016/j.stress.2024.100352">Climate resilient breeding for high yields and stable wheat (<em>Triticum aestivum</em> L.) lines under irrigated and abiotic stress environments</a></h3>
+            <div class="abstract" id="abs-plantstress-2024">
+            <p class="abstract-body">Wheat has a crucial role in eradicating all forms of hunger and malnutrition worldwide to achieve the target set by Sustainable Development Goal 2.0. The potentiality of wheat to eradicate hunger and malnutrition is severely limited by abiotic stresses such as heat stress and drought. To evaluate the performance, stability and to visualize the interrelationship among morphological parameters of wheat genotypes in order to identify the most appropriate trait for climate resilient breeding, a field experiment was conducted in the western region of Nepal during 2021-22 and 2022-23 under irrigated (I), heat stress (HS), and heat drought (HD) environments. The additive main effect multiplicative interaction (AMMI) model ANOVA showed environment had the most substantial effect on the expression of all the traits studied (p≤0.001). Wheat yield was reduced by 24 and 48% under HS and HD environments. BL 4919 (4609.5 kg ha<sup>−1</sup>), BL 4919 (3037.6 kg ha<sup>−1</sup>), and Bhrikuti (2228.9 kg ha<sup>−1</sup>) were the highest-yielding genotypes across irrigated, heat stress, and heat drought environments, respectively. WWW model revealed NL 1369, NL 1404, and NL 1417 were the most adaptable wheat genotypes across irrigated, heat stress, and heat drought environments, respectively. Whereas, NL 1381 was the most stable genotype. Phenotypic correlation, path analysis, and principal component analysis (PCA) revealed, high yielding genotypes can be selected via days to booting (DTB), days to heading (DTH), days to anthesis (DTA), booting-heading duration (BtoH), booting-anthesis duration (BtoA), and plant height (Ph). For climate resilient breeding program traits such as earliness, longer booting-heading and booting-anthesis duration, shorter heading-anthesis duration should be promoted. Dwarf genotypes might be productive under irrigated environments and taller genotypes should be promoted under heat stress and heat drought environment.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-plantstress-2024">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-plantstress-2024" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-plantstress-2024" hidden><p>Heat stress and combined heat–drought cut wheat yield by 24% and 48%. BL 4919 led yield under irrigated and heat stress conditions and Bhrikuti under heat–drought, while NL 1381 was the most stable genotype. Earliness with a longer booting-to-anthesis phase is the trait combination to promote for climate-resilient breeding.</p></div>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, S. Nyaupane, M. R. Poudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/figs/plantstress-2024-fig2.jpg" data-caption="Fig. 2 from Bhandari et al. (2024), Plant Stress, CC BY-NC-ND 4.0."><img src="media/figs/thumb/plantstress-2024-fig2.jpg" width="479" height="480" alt="Figure 2 from the paper: bar charts and box plots" loading="lazy" /></button>
+            <figcaption>Fig. 2 · from the paper · <span class="lic">CC BY-NC-ND</span></figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="drought review">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-D"></span>Drought</li></ul>
+            <ol class="glance-steps"><li>Effects</li><li>Tolerance mechanisms</li><li>Management</li></ol>
+            <p class="standout"><span>Type</span>Review article</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Review article</span><span class="journal">Cogent Food &amp; Agriculture</span><time datetime="2024-01-17">January 17, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1080/23311932.2023.2296094">Drought stress effect, tolerance, and management in wheat – a review</a></h3>
+            <div class="abstract" id="abs-cogent-review-2024">
+            <p class="abstract-body">Wheat is the most important cereal crop in the world. It contributes as a major source of protein and calories in the daily human diet. Drought has become a major abiotic stress that severely affects wheat production globally. Changing rainfall patterns, increased atmospheric CO<sub>2</sub> levels, rises in atmospheric temperature and hot and dry winds are the major causes of drought stress. It has morphological, physiological, and biochemical consequences such as reduced yield performance, yield attributing parameters, germination, and seed vigor, early leaf senescence, early maturity, decreased chlorophyll content, decreased Rubisco activity, decreased photosynthesis, and decreased starch accumulation. Drought produces reactive oxygen species that cause oxidative damage to the plants leading to programmed cell death. Wheat plant has developed various tolerance mechanisms such as drought escape, avoidance, and tolerance to protect them from drought. Increasing trichome density and leaf waxiness, root: shoot ratio, stay green, accumulation of proline, production of various enzymes viz; superoxide dismutase (SOD), ascorbate (APX), peroxidase (POD), catalase (CAT), osmotic adjustment, ABA accumulation, and formation of dehydrins leads to drought tolerance. Screening of the various genotypes for the identification of novel trait combinations, genetic engineering, and transgenic approaches (incorporates, transfer, and introduces the desirable gene into the desired plants) and thereby the adaptable varieties can be selected and induced to develop new varieties with desired characteristics would be a major genetic management strategies to overcome drought, increase production, and ensure the food and nutritional security of the world.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-cogent-review-2024">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-cogent-review-2024" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-cogent-review-2024" hidden><p>Drought damages wheat at every level — morphology, physiology, and biochemistry, including oxidative stress that can kill cells. The review maps the escape, avoidance, and tolerance mechanisms wheat uses, and outlines screening, genetic engineering, and transgenic strategies for breeding drought-resilient varieties.</p></div>
+            <p class="pub-authors">S. Nyaupane, M. R. Poudel, B. Panthi, A. Dhakal, H. Paudel, <strong>R. Bhandari</strong></p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/photos/grain-filling.jpg" data-caption="Field photo: wheat heads during grain filling at the trial site."><img src="media/photos/thumb/grain-filling.jpg" width="720" height="542" alt="Wheat heads during grain filling" loading="lazy" /></button>
+            <figcaption>Field photo · wheat at grain filling</figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="heat drought traits">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-HS"></span>Heat stress</li><li><span class="dot env-HD"></span>Heat + drought</li></ul>
+            <div class="mini-chart" aria-label="Yield loss compared with irrigated">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:24" data-tip="Heat stress: 24% lower yield than irrigated"><span class="lbar-label">Heat</span><span class="lbar-track"><span class="lbar-fill env-HS"></span></span><span class="lbar-val">24%</span></button>
+              <button type="button" class="lbar" style="--v:48" data-tip="Heat + drought: 48% lower yield than irrigated"><span class="lbar-label">Heat + drought</span><span class="lbar-track"><span class="lbar-fill env-HD"></span></span><span class="lbar-val">48%</span></button>
+            </div>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Cogent Food &amp; Agriculture</span><time datetime="2023-12-14">December 14, 2023</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.1080/23311932.2023.2288394">Expression and association of quantitative traits of wheat (<em>Triticum aestivum</em> L.) genotypes under different wheat growing environments</a></h3>
+            <div class="abstract" id="abs-cogent-2023">
+            <p class="abstract-body">Climate-resilient wheat genotype plays a crucial role in food and nutritional security of the world. The production of wheat is mainly limited by abiotic stresses such as heat stress and drought. To identify the most appropriate trait for the selection of high yielding genotypes under heat stress (HS) and heat drought (HD) environment, a field experiment was conducted in the western region of Nepal during the wheat growing season of 2021–22 to 2022–23 comprising 20 wheat genotypes under alpha lattice design. The additive main-effect multiplicative interaction (AMMI) and combined analysis of variance (ANOVA) showed environment had the most substantial effect on the expression of the quantitative traits studied with 24 and 48% yield reduction under HS and HD environments, as compared to irrigated. PCA extracted, days to booting (DTB), days to heading (DTH), days to anthesis (DTA), booting-anthesis duration (BtoA), spikelets per spike (NSPS) under irrigated; DTB, DTH, DTA, 10 spike weight (TSW), thousand kernel weight (TKW) under HS; and DTB, BtoA, spike length (SL), TSW under HD environment. Phenotypic correlation and path analysis revealed, to get high yield, selection can be done with DTB, DTH, DTA, booting-heading duration (BtoH), BtoA, plant height (Ph), spikes per meter square (NSPMS), SL, and TKW. Early booting and heading genotypes with longer spikes, more tillers, grains per spike, and seed weight benefits all environments. Extended booting-heading and booting-anthesis duration with shorter heading-anthesis duration are advantageous as well. Taller genotypes yield more under HS and HD environment whereas shorter genotypes are productive under irrigated.</p>
+            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+          </div>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-cogent-2023">Key findings</button>
+              <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-cogent-2023" hidden>Show full abstract</button>
+            </div>
+            <div class="summary" id="sum-cogent-2023" hidden><p>Heat stress and combined heat–drought reduced the yield of 20 genotypes by 24% and 48% over two seasons. Early booting and heading, longer spikes, more tillers, and heavier grains helped in every environment; taller genotypes did better under stress, while shorter ones were more productive when irrigated.</p></div>
+            <p class="pub-authors"><strong>R. Bhandari</strong>, S. Nyaupane, M. R. Poudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/figs/thesis-agromet-2022-23.png" data-caption="Agro-meteorology of the 2022–23 wheat season at the trial site (temperature and rainfall). From Radhakrishna Bhandari's B.Sc. Ag thesis defence."><img src="media/figs/thumb/thesis-agromet-2022-23.png" width="480" height="244" alt="Chart of temperature and rainfall during the 2022–23 wheat season" loading="lazy" /></button>
+            <figcaption>2022–23 season weather · from the thesis defence</figcaption>
+          </figure>
+        </li>
+
+        <li class="pub" data-tags="drought indices">
+          <aside class="glance" aria-label="At a glance">
+            <p class="glance-label">At a glance</p>
+            <ul class="envs"><li><span class="dot env-I"></span>Irrigated</li><li><span class="dot env-D"></span>Drought</li></ul>
+            <div class="mini-chart" aria-label="Yield loss compared with irrigated">
+              <p class="chart-title">Yield loss vs. irrigated</p>
+              <button type="button" class="lbar" style="--v:86.88" data-tip="Drought under a rain-out poly house: 86.88% lower mean grain yield"><span class="lbar-label">Drought</span><span class="lbar-track"><span class="lbar-fill env-D"></span></span><span class="lbar-val">87%</span></button>
+            </div>
+            <p class="standout"><span>Drought tolerant</span>Bhrikuti · BL 5116 · NL 1447 · NL 1508 · Gautam</p>
+          </aside>
+          <div class="pub-main">
+            <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Research on Crops</span><time datetime="2023-12-03">December 3, 2023</time></p>
+            <h3 class="pub-title"><a href="https://doi.org/10.31830/2348-7542.2023.ROC-1012">Identification of drought tolerant wheat (<em>Triticum aestivum</em>) genotypes using stress tolerance indices in the western Terai region of Nepal</a></h3>
+            <p class="abstract-external"><a href="https://doi.org/10.31830/2348-7542.2023.ROC-1012">Read the abstract on the publisher's site →</a></p>
+            <div class="pub-actions">
+              <button class="sum-toggle" type="button" aria-expanded="false" aria-controls="sum-roc-2023">Key findings</button>
+            </div>
+            <div class="summary" id="sum-roc-2023" hidden><p>With rain kept off the drought plots by a poly house, mean grain yield fell by 87% compared with irrigated plots. Yield stability index, geometric mean productivity, and stress tolerance index tracked yield under stress most closely, and Bhrikuti, BL 5116, NL 1447, NL 1508, and Gautam emerged as stable, high-yielding drought-tolerant genotypes.</p></div>
+            <p class="pub-authors">M. R. Poudel, M. P. Neupane, B. Panthi, <strong>R. Bhandari</strong>, S. Nyaupane, A. Dhakal, H. Paudel</p>
+          </div>
+          <figure class="pub-fig">
+            <button type="button" class="zoom" data-full="media/photos/shelter.jpg" data-caption="Field photo: the polythene shelter used to keep rain off the drought plots."><img src="media/photos/thumb/shelter.jpg" width="720" height="542" alt="Polythene rain-out shelter beside wheat plots" loading="lazy" /></button>
+            <figcaption>Field photo · the rain-out shelter</figcaption>
+          </figure>
+        </li>
+      </ol>
+
+      <p class="pub-legend"><span class="oa" aria-hidden="true"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Open access — free to read. Summaries are my own plain-language digests of each paper.</p>
+    </div>
+  </section>
+
   <section id="experience">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">02</span>
+        <span class="index">05</span>
         <h2>Research experience</h2>
       </div>
 
@@ -207,136 +669,10 @@
     </div>
   </section>
 
-  <section id="publications">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="index">03</span>
-        <h2>Publications</h2>
-      </div>
-      <p class="intro-text">
-        28 journal articles — 21 research articles, 5 reviews, and 2 preprints —
-        with 272 citations (h-index 7, i10-index 4). Selected work, newest first:
-      </p>
-
-      <ol class="pub-list">
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Scientific Reports</span><time datetime="2026-01-13">January 13, 2026</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.1038/s41598-025-29819-0">Breeding climate-resilient wheat for Nepalese agricultural system under diverse abiotic stresses using an integrated AMMI, GGE and stress tolerance indices</a></h3>
-          <div class="abstract" id="abs-scirep-2026">
-            <p class="abstract-body">Climate change has been a significant concern for the production and productivity of wheat throughout the world, including Nepal due to an increasing frequency of heat, drought, and erratic rainfall. The study evaluated the stability and adaptability of twenty elite wheat genotypes across irrigated, heat stress, rainfed, and drought environments across two growing season (2022–2024). In addition, the study evaluated the suitability of 11 stress tolerance indices (STIs) across varying stress levels. The additive main effect and multiplicative interaction (AMMI) model revealed that environment was the primary source of yield variation, while which-won-where (WWW) model identified, G6 (NL 1402) as the most stable genotype across all eight test environments, with the lowest AMMI stability value (ASV) of 0.34. Similarly, G18 (NL 1512), G16 (NL 1501), G9 (NL 1492), and G6 (NL 1402) showed high adaptability under combined irrigated, heat stress, rainfed, and drought environments, respectively. Genotypes G17 (RR21) and G18 (NL 1512) had the least G × E interaction across combined environments (df = 7), where G10 (NL 1488), G13 (NL 1506), G14 (NL 1504), and G8 (BL 5116) under combined irrigated, heat stress, rainfed, and drought (df = 1), respectively. Stress tolerance indices dynamics revealed the predictive power of many indices declined with increasing stress severity, with mean stable yield (MSY), modified stress tolerance index 2 (MSTI2), and harmonic mean productivity (HMP) emerging as the most reliable indicators under rainfed and drought environments. Under severe drought, MSY consistently explained the highest proportion of the yield variation, with the coefficient of determination (R<sup>2</sup>) reaching 1.000. These findings provides both promising genotypes and validated tolerance indices that suggest valuable tool for breeding climate-resilient wheat for Nepal and similar South Asian agro-ecologies.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-scirep-2026" hidden>Show full abstract</button>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, M. R. Poudel, H. Paudel, M. P. Neupane, P. Solanki, U. K. S. Kushwaha</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Agricultural Research</span><time datetime="2024-11-11">November 11, 2024</time></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.1007/s40003-024-00816-5">Breeding for climate resilience in wheat under irrigated, heat stress, rainfed and drought environments</a></h3>
-          <p class="abstract-external"><a href="https://doi.org/10.1007/s40003-024-00816-5">Read the abstract on the publisher's site →</a></p>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, M. R. Poudel</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Journal of Agriculture and Food Research</span><time datetime="2024-11-09">November 9, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.1016/j.jafr.2024.101506">Evaluating stress tolerance indices for their comparative validity to assess terminal heat stress and heat drought tolerance of winter wheat (<em>Triticum aestivum</em> L.) genotypes</a></h3>
-          <div class="abstract" id="abs-jafr-2024">
-            <p class="abstract-body">Stress tolerance indices have been used to evaluate the performance and stability of elite wheat genotypes under non-stress and stress environments. From 1978 to present, many stress tolerance indices have been proposed but only few studies have been conducted so far for the comparative validity of those indices based on stress levels. The study focuses to address the comparative validity of those stress tolerance indices at two distinct stress level under mild stress-heat stress environment (∼20–25 % yield reduction) and high stress-heat drought environment (∼45–50 % yield reduction). Statistical tool such as correlation, linear regression, coefficient of determination (R<sup>2</sup>), slope of regression line and principal component analysis were performed for the study. Correlation and principal component analysis revealed that, indices such as modified stress tolerance indices (MSTI1), mean productivity (MP), geometric mean productivity (GMP), harmonic mean productivity (HMP), relative efficiency index (REI), mean relative performance (MRP) and modified stress indices 2 (MSTI2) were found to have strong positive association with wheat yield under non stress and stress environments at both levels. The coefficient of determination (R<sup>2</sup>) and slope of regression line revealed, MP and MSTI1 are the most predictive and explanatory indices under irrigated environment. While indices such as MRP, REI, yield index (YI) are most predictive and explanatory under mild stress-heat stress environment and GMP, HMP, mean stable yield (MSY), tolerance index (TOL), yield stability index (YSI), stress tolerance index (STI), MSTI2, stress susceptibility index (SSI), percentage yield loss (PYL), relative stress index (RSI) are appropriate under high stress-heat drought environment.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-jafr-2024" hidden>Show full abstract</button>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, S. A. Alharbi, M. J. Ansari, M. R. Poudel</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Current Applied Science and Technology</span><time datetime="2024-10-17">October 17, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.55003/CAST.2024.259959">Performance and stability of elite wheat genotypes under irrigated, heat stress, and heat drought environments</a></h3>
-          <div class="abstract" id="abs-cast-2024">
-            <p class="abstract-body">Heat stress and drought are a significant threat to wheat production globally. These abiotic stresses influence growth, physiology, and yield-attributing parameters of wheat. To evaluate the performance and stability of elite wheat genotypes, a field experiment was conducted in the western region of Nepal at Bhairahawa, Rupandehi comprising twenty elite wheat lines under irrigated, heat stress, and heat drought conditions using alpha lattice design with two replications. The combined ANOVA across environments and AMMI model ANOVA revealed that traits, days to booting (DTB), days to heading (DTH), days to anthesis (DTA), spike weight (SW), thousand-kernel weight (TKW), and grain yield (GY) were significantly influenced by the environment (p≤0.05). The yield of wheat was reduced by 20% and 39% under heat stress and heat drought environments as compared to irrigated environment. BL 4919, NL 1368, and Bhrikuti were the highest yielding genotypes under irrigated, heat stress, and heat drought environments with mean grain yields of 6254, 4261.5, and 3322.5 kg ha<sup>-1</sup>, respectively. AMMI analysis revealed that BL 4919, NL 1417, and NL 1420 were the most adaptive genotypes under irrigated, heat-stress, and heat-drought environments. Whereas the Which Won Where (WWW) model revealed that BL 4919, NL 1368, and Bhrikuti were the most adaptive genotype under irrigated, heat stress, and heat drought environments. From Mean vs. Stability assessment, NL 1412 and NL 1369 were identified as high-yielding stable genotypes. Both the AMMI and WWW models identified NL 1386 as the most stable genotype with the lowest AMMI stability value (ASV) of 0.13. Hence, these selected genotypes should further be promoted in wheat improvement programs to further develop potential climate-resilient varieties.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-cast-2024" hidden>Show full abstract</button>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, M. R. Poudel</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Makara Journal of Science</span><time datetime="2024-09-25">September 25, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.7454/mss.v28i3.2209">Phenotypic correlation, path analysis, and quantitative trait-based selection of elite wheat genotypes under heat stress conditions in the Terai region of Nepal</a></h3>
-          <div class="abstract" id="abs-makara-2024">
-            <p class="abstract-body">Wheat is one of the most important cereal crops worldwide, but the production and productivity of wheat is affected by heat stress. A field experiment using an alpha lattice design with seven blocks was conducted on 35 elite wheat genotypes in the Terai region of Nepal to identify the most appropriate trait resulting in a high-yielding wheat genotype with high tolerance to heat stress. Correlation analysis revealed that booting-to-heading duration (BtoH), booting-to-anthesis duration (BtoA), plant height (Ph), spike length (SL), spike weight (SW), thousand grain weight (TGW), straw yield (SY), and total biomass yield (TY) had a significant positive correlation with grain yield (GY), whereas days to booting (DTB), days to heading (DTH), and days to anthesis (DTA) had significant negative correlations with GY (p ≤ 0.05). Path analysis revealed that DTB and DTA had a direct negative effect on the GY, whereas DTH had an indirect negative effect on yield via DTB. BtoA, Ph, SL, SW, and TGW had direct positive effects on yield, whereas BtoH had an indirect positive effect on yield via DTB. Principal component analysis demonstrated that high-yielding genotypes can be selected using DTB, DTH, DTA, BtoH, BtoA, and Ph. Taller and earlier genotype with long BtoH and BtoA would produce high yield under heat stress.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-makara-2024" hidden>Show full abstract</button>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, B. Panthi, S. Nyaupane, S. Shrestha, P. Sharma, R. K. Gupta, S. Sahani, M. R. Poudel</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Research on Crops</span><time datetime="2024-03-11">March 11, 2024</time></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.31830/2348-7542.2024.ROC-1052">Impact of terminal heat stress on performance of Nepalese wheat (<em>Triticum aestivum</em> L.) genotypes</a></h3>
-          <p class="abstract-external"><a href="https://doi.org/10.31830/2348-7542.2024.ROC-1052">Read the abstract on the publisher's site →</a></p>
-          <p class="pub-authors">M. R. Poudel, H. K. Poudel, <strong>R. Bhandari</strong></p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Journal of Sustainable Agriculture and Environment</span><time datetime="2024-03-01">March 1, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.1002/sae2.12098">Genotype × environment interaction and selection parameters for high yielding wheat genotypes under irrigated and heat stress environment</a></h3>
-          <div class="abstract" id="abs-jsae-2024">
-            <p class="abstract-body"><b>Introduction</b> Wheat is a significant contributor to the food and nutritional security of the world. Due to climatic constraints and heat stress condition, the potentiality of wheat to eradicate existing hunger and malnutrition has been severely limited all around the world. <b>Materials and Methods</b> To evaluate the performance and stability of elite wheat genotype under irrigated and heat stress environment, a field experiment was conducted during the wheat growing season of 2020, 2021 and 2022 under irrigated and heat stress environment that altogether created six distinct wheat growing environments. <b>Results</b> The combined ANOVA revealed that all quantitative traits studied were significantly influenced by heat stress environments (p &lt; 0.01). Which Won Where (WWW) model revealed, Bhairahawa lines (BL) 4407, Nepal lines (NL) 1384 and NL 1346 performed best under irrigated environments of 2020, 2021 and 2022 while BL 4407, NL 1384 and NL 1381 performed best under heat stress environment of 2020, 2021 and 2022. WWW model showed, NL 1369, NL 1386 and NL 1376 as the most stable genotypes across irrigated and heat stress environment. The phenotypic correlation, path analysis, network diagram, cluster analysis and cluster based principal component analysis analysis revealed traits, days to booting (DTB), plant height (Ph), spike length (SL), ten spike weight (TSW) and thousand kernel weight (TKW) are most closely associated with grain yield of wheat. <b>Conclusion</b> High yielding genotypes should be selected based on earliness in DTB, longer Ph, SL and higher TSW and TKW under both environments. Breeding for taller genotypes should specifically be focused to obtain high yielding genotypes under heat stress environments.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-jsae-2024" hidden>Show full abstract</button>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, M. R. Poudel</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Plant Stress</span><time datetime="2024-01-18">January 18, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.1016/j.stress.2024.100352">Climate resilient breeding for high yields and stable wheat (<em>Triticum aestivum</em> L.) lines under irrigated and abiotic stress environments</a></h3>
-          <div class="abstract" id="abs-plantstress-2024">
-            <p class="abstract-body">Wheat has a crucial role in eradicating all forms of hunger and malnutrition worldwide to achieve the target set by Sustainable Development Goal 2.0. The potentiality of wheat to eradicate hunger and malnutrition is severely limited by abiotic stresses such as heat stress and drought. To evaluate the performance, stability and to visualize the interrelationship among morphological parameters of wheat genotypes in order to identify the most appropriate trait for climate resilient breeding, a field experiment was conducted in the western region of Nepal during 2021-22 and 2022-23 under irrigated (I), heat stress (HS), and heat drought (HD) environments. The additive main effect multiplicative interaction (AMMI) model ANOVA showed environment had the most substantial effect on the expression of all the traits studied (p≤0.001). Wheat yield was reduced by 24 and 48% under HS and HD environments. BL 4919 (4609.5 kg ha<sup>−1</sup>), BL 4919 (3037.6 kg ha<sup>−1</sup>), and Bhrikuti (2228.9 kg ha<sup>−1</sup>) were the highest-yielding genotypes across irrigated, heat stress, and heat drought environments, respectively. WWW model revealed NL 1369, NL 1404, and NL 1417 were the most adaptable wheat genotypes across irrigated, heat stress, and heat drought environments, respectively. Whereas, NL 1381 was the most stable genotype. Phenotypic correlation, path analysis, and principal component analysis (PCA) revealed, high yielding genotypes can be selected via days to booting (DTB), days to heading (DTH), days to anthesis (DTA), booting-heading duration (BtoH), booting-anthesis duration (BtoA), and plant height (Ph). For climate resilient breeding program traits such as earliness, longer booting-heading and booting-anthesis duration, shorter heading-anthesis duration should be promoted. Dwarf genotypes might be productive under irrigated environments and taller genotypes should be promoted under heat stress and heat drought environment.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-plantstress-2024" hidden>Show full abstract</button>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, H. Paudel, S. Nyaupane, M. R. Poudel</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Review article</span><span class="journal">Cogent Food &amp; Agriculture</span><time datetime="2024-01-17">January 17, 2024</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.1080/23311932.2023.2296094">Drought stress effect, tolerance, and management in wheat – a review</a></h3>
-          <div class="abstract" id="abs-cogent-review-2024">
-            <p class="abstract-body">Wheat is the most important cereal crop in the world. It contributes as a major source of protein and calories in the daily human diet. Drought has become a major abiotic stress that severely affects wheat production globally. Changing rainfall patterns, increased atmospheric CO<sub>2</sub> levels, rises in atmospheric temperature and hot and dry winds are the major causes of drought stress. It has morphological, physiological, and biochemical consequences such as reduced yield performance, yield attributing parameters, germination, and seed vigor, early leaf senescence, early maturity, decreased chlorophyll content, decreased Rubisco activity, decreased photosynthesis, and decreased starch accumulation. Drought produces reactive oxygen species that cause oxidative damage to the plants leading to programmed cell death. Wheat plant has developed various tolerance mechanisms such as drought escape, avoidance, and tolerance to protect them from drought. Increasing trichome density and leaf waxiness, root: shoot ratio, stay green, accumulation of proline, production of various enzymes viz; superoxide dismutase (SOD), ascorbate (APX), peroxidase (POD), catalase (CAT), osmotic adjustment, ABA accumulation, and formation of dehydrins leads to drought tolerance. Screening of the various genotypes for the identification of novel trait combinations, genetic engineering, and transgenic approaches (incorporates, transfer, and introduces the desirable gene into the desired plants) and thereby the adaptable varieties can be selected and induced to develop new varieties with desired characteristics would be a major genetic management strategies to overcome drought, increase production, and ensure the food and nutritional security of the world.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-cogent-review-2024" hidden>Show full abstract</button>
-          <p class="pub-authors">S. Nyaupane, M. R. Poudel, B. Panthi, A. Dhakal, H. Paudel, <strong>R. Bhandari</strong></p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Cogent Food &amp; Agriculture</span><time datetime="2023-12-14">December 14, 2023</time><span class="oa" title="Open access"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Open access</span></span></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.1080/23311932.2023.2288394">Expression and association of quantitative traits of wheat (<em>Triticum aestivum</em> L.) genotypes under different wheat growing environments</a></h3>
-          <div class="abstract" id="abs-cogent-2023">
-            <p class="abstract-body">Climate-resilient wheat genotype plays a crucial role in food and nutritional security of the world. The production of wheat is mainly limited by abiotic stresses such as heat stress and drought. To identify the most appropriate trait for the selection of high yielding genotypes under heat stress (HS) and heat drought (HD) environment, a field experiment was conducted in the western region of Nepal during the wheat growing season of 2021–22 to 2022–23 comprising 20 wheat genotypes under alpha lattice design. The additive main-effect multiplicative interaction (AMMI) and combined analysis of variance (ANOVA) showed environment had the most substantial effect on the expression of the quantitative traits studied with 24 and 48% yield reduction under HS and HD environments, as compared to irrigated. PCA extracted, days to booting (DTB), days to heading (DTH), days to anthesis (DTA), booting-anthesis duration (BtoA), spikelets per spike (NSPS) under irrigated; DTB, DTH, DTA, 10 spike weight (TSW), thousand kernel weight (TKW) under HS; and DTB, BtoA, spike length (SL), TSW under HD environment. Phenotypic correlation and path analysis revealed, to get high yield, selection can be done with DTB, DTH, DTA, booting-heading duration (BtoH), BtoA, plant height (Ph), spikes per meter square (NSPMS), SL, and TKW. Early booting and heading genotypes with longer spikes, more tillers, grains per spike, and seed weight benefits all environments. Extended booting-heading and booting-anthesis duration with shorter heading-anthesis duration are advantageous as well. Taller genotypes yield more under HS and HD environment whereas shorter genotypes are productive under irrigated.</p>
-            <p class="abstract-license">Abstract reproduced from the article under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
-          </div>
-          <button class="abs-toggle" type="button" aria-expanded="false" aria-controls="abs-cogent-2023" hidden>Show full abstract</button>
-          <p class="pub-authors"><strong>R. Bhandari</strong>, S. Nyaupane, M. R. Poudel</p>
-        </li>
-
-        <li class="pub">
-          <p class="pub-meta"><span class="kind">Research article</span><span class="journal">Research on Crops</span><time datetime="2023-12-03">December 3, 2023</time></p>
-          <h3 class="pub-title"><a href="https://doi.org/10.31830/2348-7542.2023.ROC-1012">Identification of drought tolerant wheat (<em>Triticum aestivum</em>) genotypes using stress tolerance indices in the western Terai region of Nepal</a></h3>
-          <p class="abstract-external"><a href="https://doi.org/10.31830/2348-7542.2023.ROC-1012">Read the abstract on the publisher's site →</a></p>
-          <p class="pub-authors">M. R. Poudel, M. P. Neupane, B. Panthi, <strong>R. Bhandari</strong>, S. Nyaupane, A. Dhakal, H. Paudel</p>
-        </li>
-      </ol>
-
-      <p class="pub-legend"><span class="oa" aria-hidden="true"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.5 8.3l2.2 2.2 4.8-4.8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Open access — free to read</p>
-    </div>
-  </section>
-
   <section id="reviewing">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">04</span>
+        <span class="index">06</span>
         <h2>Peer review</h2>
       </div>
       <p class="intro-text">
@@ -363,7 +699,7 @@
   <section id="education">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">05</span>
+        <span class="index">07</span>
         <h2>Education</h2>
       </div>
 
@@ -407,7 +743,7 @@
   <section id="skills">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">06</span>
+        <span class="index">08</span>
         <h2>Skills &amp; training</h2>
       </div>
 
@@ -442,7 +778,7 @@
   <section id="talks">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">07</span>
+        <span class="index">09</span>
         <h2>Conferences &amp; outreach</h2>
       </div>
 
@@ -488,7 +824,7 @@
   <section id="contact">
     <div class="wrap">
       <div class="section-head">
-        <span class="index">08</span>
+        <span class="index">10</span>
         <h2>Get in touch</h2>
       </div>
 
@@ -512,20 +848,16 @@
   <span>Plant breeding · Climate-resilient wheat</span>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged image">
+  <button type="button" class="lb-close" aria-label="Close">×</button>
+  <button type="button" class="lb-prev" aria-label="Previous photo">‹</button>
+  <figure>
+    <img alt="" />
+    <figcaption></figcaption>
+  </figure>
+  <button type="button" class="lb-next" aria-label="Next photo">›</button>
+</dialog>
 
-  // Abstracts start as a two-line preview; the button expands them in place.
-  document.querySelectorAll('.abs-toggle').forEach(function (btn) {
-    var abs = document.getElementById(btn.getAttribute('aria-controls'));
-    btn.hidden = false;
-    btn.addEventListener('click', function () {
-      var open = abs.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(open));
-      btn.textContent = open ? 'Show less' : 'Show full abstract';
-    });
-  });
-</script>
-
+<script src="js/site.js?v=4"></script>
 </body>
 </html>
