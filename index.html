@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <!-- Bump ?v= whenever style.css or site.js changes so browsers fetch the new version -->
-<link rel="stylesheet" href="css/style.css?v=5" />
+<link rel="stylesheet" href="css/style.css?v=6" />
 </head>
 <body>
 
@@ -222,24 +222,74 @@
       <div class="tab-panel" role="tabpanel" id="panel-global" aria-labelledby="tab-global" hidden>
         <div class="project">
           <div class="project-text">
-            <p class="project-meta">Data-driven study · FAOSTAT</p>
-            <h3>Global oats productivity, 2000–2022</h3>
+            <p class="project-meta">2000 – 2022 · FAOSTAT · global desk study</p>
+            <h3>Global cereal productivity over two decades</h3>
             <p>
-              A global analysis of oats productivity built on FAOSTAT records for 74
-              countries across 2000–2022, tracing how productivity has changed over
-              two decades. The manuscript (Bhandari et al.) is being strengthened with
-              a more causal and inferential framework.
+              How has cereal cultivation changed across the world since 2000, and where
+              are the gaps? Using FAOSTAT records of harvested area, production, and yield
+              for ten crops — rice, wheat, maize, green corn, barley, oats, sorghum,
+              buckwheat, quinoa, and all cereals combined — I analyse growth rates,
+              trends, and regional disparities at world, continent, sub-regional, and
+              country level. The work is planned as a five-paper series.
             </p>
+            <p class="methods-note">
+              <b>Methods:</b> average and percentage growth rates over five-year blocks,
+              linear trend analysis, one-way ANOVA, clustered heatmaps, neighbour-joining
+              ranking, and mean-versus-stability biplots, in R and PAST.
+            </p>
+
+            <h4 class="findings-head">Oats <span class="status status-rev">Under revision</span></h4>
             <ul class="outcomes">
-              <li>Country-level productivity trends for a major cereal, across more than two decades.</li>
+              <li>Global oat yield rose from <strong>2,073 to 2,775 kg/ha</strong> between 2000 and 2022 — a 33.8% gain, about 32 kg/ha per year.</li>
+              <li>74 countries across 5 regions grew oats consistently; Ireland, the UK, New Zealand, the Netherlands, Denmark, Belgium, and Luxembourg led at over 5,000 kg/ha, with Ireland above 6,500 kg/ha every year.</li>
+              <li>Northern Africa (<strong>+197%</strong>) and Eastern Africa (+117.5%) posted the fastest regional growth.</li>
+              <li>Clustering sorted oat-growing countries into six productivity groups, with Ireland in a group of its own.</li>
             </ul>
+
+            <h4 class="findings-head">Rice <span class="status status-draft">Draft · preliminary</span></h4>
+            <ul class="outcomes">
+              <li>India's rice production grew <strong>54%</strong> (127.5 → 196.3 million t) from 2000 to 2022, against 11% for China (189.8 → 210.1 million t).</li>
+              <li>Australia recorded the highest rice yield in 2022, at 11,055 kg/ha.</li>
+            </ul>
+
+            <h4 class="findings-head">The series</h4>
+            <ol class="series">
+              <li><span class="status status-rev">Under revision</span>Global trend and regional disparity analysis of oats cultivation and production</li>
+              <li><span class="status status-draft">Draft</span>Global trends and regional disparity analysis in rice cultivation and production</li>
+              <li><span class="status status-plan">Planned</span>Sorghum · global grain productivity over two decades · global methane dynamics in agriculture</li>
+            </ol>
           </div>
+
           <div class="project-visual">
             <dl class="big-stats">
-              <div><dt>countries</dt><dd>74</dd></div>
-              <div><dt>years of data</dt><dd>23</dd></div>
-              <div><dt>data source</dt><dd>FAOSTAT</dd></div>
+              <div><dt>crops</dt><dd>10</dd></div>
+              <div><dt>years (2000–2022)</dt><dd>23</dd></div>
+              <div><dt>countries &amp; areas</dt><dd>189</dd></div>
             </dl>
+
+            <div class="loss-chart coverage" aria-label="Number of FAOSTAT countries and areas with data, by crop">
+              <p class="chart-title">Countries &amp; areas with data</p>
+              <button type="button" class="lbar" style="--v:98.4" data-tip="All cereals: 186 FAOSTAT countries and areas"><span class="lbar-label">All cereals</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">186</span></button>
+              <button type="button" class="lbar" style="--v:93.1" data-tip="Maize: 176 countries and areas"><span class="lbar-label">Maize</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">176</span></button>
+              <button type="button" class="lbar" style="--v:77.8" data-tip="Rice: 147 countries and areas"><span class="lbar-label">Rice</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">147</span></button>
+              <button type="button" class="lbar" style="--v:70.4" data-tip="Sorghum: 133 countries and areas"><span class="lbar-label">Sorghum</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">133</span></button>
+              <button type="button" class="lbar" style="--v:68.3" data-tip="Wheat: 129 countries and areas"><span class="lbar-label">Wheat</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">129</span></button>
+              <button type="button" class="lbar" style="--v:57.7" data-tip="Barley: 109 countries and areas"><span class="lbar-label">Barley</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">109</span></button>
+              <button type="button" class="lbar" style="--v:44.4" data-tip="Oats: 84 countries and areas (74 grew oats consistently)"><span class="lbar-label">Oats</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">84</span></button>
+              <button type="button" class="lbar" style="--v:29.6" data-tip="Green corn: 56 countries and areas"><span class="lbar-label">Green corn</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">56</span></button>
+              <button type="button" class="lbar" style="--v:19" data-tip="Buckwheat: 36 countries and areas"><span class="lbar-label">Buckwheat</span><span class="lbar-track"><span class="lbar-fill cov"></span></span><span class="lbar-val">36</span></button>
+              <p class="chart-note">FAOSTAT lists some overlapping areas (e.g. China and China, mainland). Tap a bar for details.</p>
+            </div>
+
+            <div class="global-figs">
+              <button type="button" class="zoom gf-wide" data-group="global" data-full="media/global/oats-map.png" data-caption="Oat yield by country in 2022 (286–8,324 kg/ha). Figure from the oats manuscript."><img src="media/global/thumb/oats-map.jpg" width="560" height="346" alt="World map of oat yield by country in 2022" loading="lazy" /><span class="g-cap">Oat yield by country, 2022</span></button>
+              <button type="button" class="zoom" data-group="global" data-full="media/global/oats-yield.png" data-caption="Oat yield (kg/ha) of oat-growing countries, 2000–2022, clustered by similarity."><img src="media/global/thumb/oats-yield.jpg" width="373" height="560" alt="Clustered heatmap of oat yield by country, 2000–2022" loading="lazy" /><span class="g-cap">Oats</span></button>
+              <button type="button" class="zoom" data-group="global" data-full="media/global/wheat-yield.png" data-caption="Wheat yield (kg/ha) by country, 2000–2022, clustered heatmap."><img src="media/global/thumb/wheat-yield.jpg" width="420" height="560" alt="Clustered heatmap of wheat yield by country, 2000–2022" loading="lazy" /><span class="g-cap">Wheat</span></button>
+              <button type="button" class="zoom" data-group="global" data-full="media/global/rice-yield.png" data-caption="Rice yield (kg/ha) by country, 2000–2022, clustered heatmap."><img src="media/global/thumb/rice-yield.jpg" width="560" height="560" alt="Clustered heatmap of rice yield by country, 2000–2022" loading="lazy" /><span class="g-cap">Rice</span></button>
+              <button type="button" class="zoom" data-group="global" data-full="media/global/barley-yield.png" data-caption="Barley yield (kg/ha) by country, 2000–2022, clustered heatmap."><img src="media/global/thumb/barley-yield.jpg" width="560" height="373" alt="Clustered heatmap of barley yield by country, 2000–2022" loading="lazy" /><span class="g-cap">Barley</span></button>
+              <button type="button" class="zoom" data-group="global" data-full="media/global/buckwheat-yield.png" data-caption="Buckwheat yield (kg/ha) by country, 2000–2022, clustered heatmap."><img src="media/global/thumb/buckwheat-yield.jpg" width="560" height="279" alt="Clustered heatmap of buckwheat yield by country, 2000–2022" loading="lazy" /><span class="g-cap">Buckwheat</span></button>
+            </div>
+            <p class="chart-note">Yield heatmaps, 2000–2022 — tap any figure to enlarge.</p>
           </div>
         </div>
       </div>
@@ -931,6 +981,6 @@
   <button type="button" class="lb-next" aria-label="Next photo">›</button>
 </dialog>
 
-<script src="js/site.js?v=5"></script>
+<script src="js/site.js?v=6"></script>
 </body>
 </html>

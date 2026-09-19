@@ -120,7 +120,7 @@ p { margin: 0 0 1rem; }
 .site-nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; }
 .site-nav a:hover { color: var(--sky); }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .site-nav .wrap {
     flex-direction: column;
     align-items: flex-start;
@@ -284,7 +284,7 @@ section + section { border-top: 1px solid var(--line); }
   margin: 1.6rem 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
   gap: 1.4rem 2.2rem;
 }
 
@@ -549,7 +549,7 @@ ul.plain li { margin-bottom: 0.3rem; }
   margin: 1.6rem 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr));
   column-gap: 2rem;
 }
 .review-list li {
@@ -759,10 +759,9 @@ html:not(.js) .lbar-fill { width: calc(var(--v) * 1%); }
   content: attr(data-tip);
   position: absolute;
   left: 0;
+  right: 0;              /* as wide as its bar, so it never pokes past the card */
   bottom: calc(100% + 6px);
   z-index: 5;
-  width: max-content;
-  max-width: 15rem;
   padding: 0.45rem 0.6rem;
   background: var(--ink);
   color: var(--paper);
@@ -1024,6 +1023,52 @@ html:not(.js) .lbar-fill { width: calc(var(--v) * 1%); }
 .lb-prev[hidden],
 .lb-next[hidden] { display: none; }
 
+/* ---------- Global cereal project ---------- */
+
+.methods-note { font-size: 0.92rem; }
+.methods-note b { color: var(--ink); font-weight: 600; }
+.findings-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.4rem 0 0.2rem;
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+.status {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.status-rev { background: #e3efe0; color: #2f5f2b; }
+.status-draft { background: #f5e6c8; color: #7a5a17; }
+.status-plan { background: #e6e9ee; color: #44505e; }
+.series { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+.series li { padding: 0.5rem 0; border-top: 1px solid var(--line); font-size: 0.92rem; color: var(--ink-soft); }
+.series .status { margin-right: 0.6rem; }
+
+.big-stats { grid-template-columns: repeat(3, 1fr); }
+.big-stats div { flex-direction: column-reverse; gap: 0.2rem; }
+.big-stats dd { font-size: 2.2rem; }
+.big-stats dt { font-size: 0.8rem; }
+
+.coverage .lbar { font-size: 0.82rem; margin-bottom: 0.3rem; }
+.coverage .lbar-track { height: 0.45rem; }
+.lbar-fill.cov { background: var(--field); }
+
+.global-figs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+.global-figs .zoom { position: relative; background: #fff; border: 1px solid var(--line); }
+.global-figs img { aspect-ratio: 1 / 1; object-fit: cover; object-position: top left; }
+.global-figs .gf-wide { grid-column: 1 / -1; }
+.global-figs .gf-wide img { aspect-ratio: 560 / 346; object-fit: contain; }
+.global-figs .g-cap { opacity: 1; padding: 1rem 0.5rem 0.35rem; font-size: 0.74rem; }
+
 /* ---------- Gallery "see more" ---------- */
 
 .js .gallery:not(.show-all) .g-more { display: none; }
@@ -1044,7 +1089,7 @@ html:not(.js) .gallery-more { display: none; }
 
 /* ---------- Theses ---------- */
 
-.theses { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 2rem; }
+.theses { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr)); gap: 2rem; }
 .thesis {
   display: flex;
   flex-direction: column;
