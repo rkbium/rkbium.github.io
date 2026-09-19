@@ -119,34 +119,6 @@
     });
   }
 
-  /* ---------- Live citation metrics from OpenAlex (linked to ORCID) ---------- */
-  // Falls back silently to the numbers already in the HTML.
-  if (window.fetch) {
-    fetch('https://api.openalex.org/authors/A5071161701?select=works_count,cited_by_count,summary_stats,updated_date')
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (a) {
-        var values = {
-          works: a.works_count,
-          citations: a.cited_by_count,
-          h: a.summary_stats && a.summary_stats.h_index,
-          i10: a.summary_stats && a.summary_stats.i10_index
-        };
-        Object.keys(values).forEach(function (k) {
-          if (typeof values[k] !== 'number') return;
-          document.querySelectorAll('[data-metric="' + k + '"]').forEach(function (el) {
-            el.textContent = values[k].toLocaleString('en');
-          });
-        });
-        if (a.updated_date) {
-          var d = new Date(a.updated_date);
-          document.querySelectorAll('[data-metric="updated"]').forEach(function (el) {
-            el.textContent = 'last updated ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-          });
-        }
-      })
-      .catch(function () {});
-  }
-
   /* ---------- Lightbox for figures, photos, and slides ---------- */
   var lb = document.getElementById('lightbox');
   if (!lb || typeof lb.showModal !== 'function') {

@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <!-- Bump ?v= whenever style.css or site.js changes so browsers fetch the new version -->
-<link rel="stylesheet" href="css/style.css?v=7" />
+<link rel="stylesheet" href="css/style.css?v=8" />
 </head>
 <body>
 
@@ -47,11 +47,17 @@
 
 <header id="top" class="hero">
   <div class="hero-copy">
-    <span class="eyebrow-line" aria-hidden="true"></span>
-    <h1>Radhakrishna Bhandari</h1>
+    <div class="name-row">
+      <button type="button" class="avatar zoom" data-full="media/portrait-1200.jpg" data-caption="Radhakrishna Bhandari">
+        <img src="media/portrait.jpg" width="480" height="480" alt="Portrait of Radhakrishna Bhandari" />
+      </button>
+      <div>
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <h1>Radhakrishna Bhandari</h1>
+      </div>
+    </div>
     <p class="contact-line">
       <a href="mailto:radha.181401@pakc.tu.edu.np">radha.181401@pakc.tu.edu.np</a>
-      <span>Omsatiya-1, 32900, Nepal</span>
     </p>
     <p class="lede">
       I aim to contribute to the challenges associated with global food and
@@ -79,17 +85,27 @@
 </header>
 
 <div class="wrap">
-  <!-- Citation numbers refresh from OpenAlex on every visit (js/site.js);
-       the values below are the fallback if that request fails. -->
+  <!-- Citation metrics are copied from the Google Scholar profile (Scholar has no
+       public API). To refresh: update the numbers, the per-year bars, and the date. -->
   <div class="metrics">
     <dl class="stats">
-      <div><dt>Publications</dt><dd data-metric="works">28</dd></div>
-      <div><dt>Citations</dt><dd data-metric="citations">255</dd></div>
-      <div><dt>h-index</dt><dd data-metric="h">6</dd></div>
-      <div><dt>i10-index</dt><dd data-metric="i10">4</dd></div>
+      <div><dt>Publications</dt><dd>28</dd></div>
+      <div><dt>Citations</dt><dd>526</dd></div>
+      <div><dt>h-index</dt><dd>11</dd></div>
+      <div><dt>i10-index</dt><dd>14</dd></div>
       <div><dt>Manuscripts peer-reviewed</dt><dd>50+</dd></div>
     </dl>
-    <p class="metrics-source">Citation metrics from <a href="https://openalex.org/authors/A5071161701">OpenAlex</a> (linked to ORCID), <span data-metric="updated">refreshed automatically</span>. Counts can differ slightly from <a href="https://scholar.google.com/citations?user=Gn3roLQAAAAJ&amp;hl=en">Google Scholar</a>, which indexes more sources.</p>
+    <figure class="cite-years" aria-label="Citations per year, Google Scholar">
+      <figcaption>Citations per year</figcaption>
+      <ol>
+        <li style="--h:0.9"><span class="cy-val">2</span><span class="cy-bar"></span><span class="cy-year">2022</span></li>
+        <li style="--h:3.9"><span class="cy-val">9</span><span class="cy-bar"></span><span class="cy-year">2023</span></li>
+        <li style="--h:50.9"><span class="cy-val">117</span><span class="cy-bar"></span><span class="cy-year">2024</span></li>
+        <li style="--h:70.4"><span class="cy-val">162</span><span class="cy-bar"></span><span class="cy-year">2025</span></li>
+        <li style="--h:100" class="cy-now"><span class="cy-val">230</span><span class="cy-bar"></span><span class="cy-year">2026*</span></li>
+      </ol>
+    </figure>
+    <p class="metrics-source">Citation metrics from <a href="https://scholar.google.com/citations?user=Gn3roLQAAAAJ&amp;hl=en">Google Scholar</a>, as of 19 September 2026 (*2026 so far).</p>
   </div>
 </div>
 
@@ -197,16 +213,23 @@
               <li>Led a plant disease campaign (05/2021), turning plant pathology findings into practical disease management advice for farmers.</li>
               <li>Now continuing at Jawaharlal Nehru University with SSR markers linked to rust resistance.</li>
             </ul>
-            <a class="more-link" href="#experience">See research experience →</a>
+
+            <h4 class="findings-head">Work in progress <span class="status status-draft">In progress</span></h4>
+            <ul class="outcomes">
+              <li><strong>Spot blotch (<em>Bipolaris sorokiniana</em>):</strong> analysing how severity differs among genotypes and across irrigated, rainfed, drought, and heat stress environments.</li>
+              <li><strong>Powdery mildew (<em>Blumeria graminis</em>):</strong> the same genotype-by-environment analysis for powdery mildew severity.</li>
+            </ul>
           </div>
           <div class="project-visual">
             <div class="disease-cards">
               <div class="disease">
+                <span class="status status-draft">Work in progress</span>
                 <p class="disease-name">Spot blotch</p>
                 <p class="disease-sci"><em>Bipolaris sorokiniana</em></p>
                 <p class="disease-note">Fungal leaf disease, favoured by warm, humid conditions</p>
               </div>
               <div class="disease">
+                <span class="status status-draft">Work in progress</span>
                 <p class="disease-name">Powdery mildew</p>
                 <p class="disease-sci"><em>Blumeria graminis</em></p>
                 <p class="disease-note">Fungal disease forming white growth on leaves</p>
@@ -350,8 +373,7 @@
       </div>
       <p class="intro-text">
         28 journal articles — 21 research articles, 5 reviews, and 2 preprints —
-        cited <span data-metric="citations">255</span> times (h-index <span data-metric="h">6</span>,
-        i10-index <span data-metric="i10">4</span>). Selected work, newest first:
+        cited 526 times on Google Scholar (h-index 11, i10-index 14). Selected work, newest first:
       </p>
 
       <div class="filters" role="group" aria-label="Filter publications by topic">
@@ -954,8 +976,10 @@
 
       <div class="contact-block">
         <p>
-          I'm open to PhD opportunities in plant breeding and genetics, research
-          collaboration, and conversations about climate-resilient crops.
+          I'm open to research collaboration and conversations that move toward
+          <a href="#vision">my vision</a> — a crop-improvement institute in Nepal built on
+          genomics, bioinformatics, and biotechnology, from climate-resilient cereals to
+          fruits, vegetables, ornamentals, and turf.
         </p>
         <dl class="contact-rows">
           <div><dt>Email</dt><dd><a href="mailto:radha.181401@pakc.tu.edu.np">radha.181401@pakc.tu.edu.np</a></dd></div>
@@ -983,6 +1007,6 @@
   <button type="button" class="lb-next" aria-label="Next photo">›</button>
 </dialog>
 
-<script src="js/site.js?v=6"></script>
+<script src="js/site.js?v=8"></script>
 </body>
 </html>
