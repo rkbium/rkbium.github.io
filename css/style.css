@@ -599,9 +599,11 @@ ul.plain li { margin-bottom: 0.3rem; }
 .contact-block p { color: var(--ink-soft); }
 
 .contact-rows { margin-top: 1.2rem; display: grid; gap: 0.5rem; font-size: 0.98rem; }
-.contact-rows dt { display: inline-block; width: 6.5rem; color: var(--ink-soft); }
-.contact-rows dd { display: inline; margin: 0; overflow-wrap: anywhere; }
-.contact-rows div { padding: 0.15rem 0; }
+.contact-rows div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 0.8rem; padding: 0.15rem 0; }
+.contact-rows dt { color: var(--ink-soft); }
+.contact-rows dd { margin: 0; overflow-wrap: anywhere; }
+.contact-profiles { line-height: 1.8; }
+@media (max-width: 480px) { .contact-rows div { grid-template-columns: 1fr; gap: 0; } }
 
 /* Footer */
 
