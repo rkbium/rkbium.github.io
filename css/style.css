@@ -13,6 +13,7 @@
   --field: #4c5b3a;
   --sky: #2c4a52;
   --line: #ddd2b5;
+  --oa: #3f7d3a;
 
   --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
   --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -322,18 +323,121 @@ ul.plain li { margin-bottom: 0.3rem; }
 
 /* Publications */
 
-.pub-list { list-style: none; margin: 1.6rem 0 0; padding: 0; }
-.pub-item {
-  padding: 1.1rem 0;
-  border-top: 1px solid var(--line);
+.pub-list { list-style: none; margin: 2rem 0 0; padding: 0; }
+
+.pub { padding: 1.9rem 0; border-top: 1px solid var(--line); }
+.pub:first-child { border-top: none; padding-top: 0; }
+.pub p { margin: 0; }
+
+/* Label row: TYPE | JOURNAL | DATE | open-access mark */
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.25rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
 }
-.pub-item:first-child { border-top: none; padding-top: 0; }
-.pub-item p { margin: 0; }
-.pub-item p.title { font-family: var(--serif); font-size: 1.08rem; line-height: 1.35; margin-bottom: 0.3rem; }
-.pub-item .authors { color: var(--ink-soft); font-size: 0.9rem; }
-.pub-item .authors strong { color: var(--ink); font-weight: 600; }
-.pub-item .meta { color: var(--ink-soft); font-size: 0.86rem; margin-top: 0.2rem; overflow-wrap: anywhere; }
-.pub-item .venue { color: var(--sky); font-style: italic; }
+.pub-meta > * + *::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.95em;
+  background: var(--ink-soft);
+  opacity: 0.45;
+  margin: 0 0.7rem;
+  vertical-align: -0.1em;
+}
+.pub-meta .kind { color: var(--sky); }
+
+/* On phones the journal gets its own line instead of wrapping mid-row */
+@media (max-width: 600px) {
+  .pub-meta .journal { order: 10; flex-basis: 100%; margin-top: 0.15rem; }
+  .pub-meta .journal::before { display: none; }
+}
+
+.oa { display: inline-flex; align-items: center; }
+.oa svg { width: 0.95rem; height: 0.95rem; fill: var(--oa); }
+
+.pub-title {
+  font-family: var(--sans);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0.55rem 0 0.6rem;
+}
+.pub-title a { color: var(--ink); text-decoration: none; }
+.pub-title a:hover { color: var(--sky); text-decoration: underline; text-decoration-thickness: 1px; }
+
+.abstract-body { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.65; }
+.abstract-body b { color: var(--ink); font-weight: 600; }
+.abstract-license { margin-top: 0.6rem !important; font-size: 0.8rem; color: var(--ink-soft); }
+
+/* Collapsed state — only when JS is running, so the text is never trapped */
+.js .abstract:not(.open) .abstract-body {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.js .abstract:not(.open) .abstract-license { display: none; }
+
+.abs-toggle {
+  margin-top: 0.45rem;
+  padding: 0.15rem 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sky);
+  cursor: pointer;
+}
+.abs-toggle::after {
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-left: 0.5em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.2em) rotate(45deg);
+  transition: transform 0.2s;
+}
+.abs-toggle[aria-expanded="true"]::after { transform: translateY(0.05em) rotate(-135deg); }
+.abs-toggle:hover { color: var(--wheat-deep); }
+
+.abstract-external { font-size: 0.92rem; }
+
+.pub-authors { margin-top: 0.55rem !important; font-size: 0.85rem; color: var(--ink-soft); }
+.pub-authors strong { color: var(--ink); font-weight: 600; }
+
+.pub-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
 /* Peer review */
 
