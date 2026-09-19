@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>
+  // Send visitors on plain http:// to the secure https:// version.
+  if (location.protocol === 'http:' && location.hostname !== 'localhost') {
+    location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+  }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Radhakrishna Bhandari — Wheat Genomics &amp; Climate-Resilient Breeding</title>
 <meta name="description" content="Radhakrishna Bhandari — wheat researcher at IAAS, Tribhuvan University, working on QTL/GWAS, SSR marker analysis, and multi-environment genotype stability for climate-resilient wheat breeding in South Asia." />
